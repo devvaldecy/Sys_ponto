@@ -6,19 +6,21 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls;
+  StdCtrls, Buttons;
 
 type
 
   { TFrmPrincipal }
 
   TFrmPrincipal = class(TForm)
+    BtnMenus: TBitBtn;
     Label1: TLabel;
     Label2: TLabel;
-    Panel1: TPanel;
+    PnlEdquerdo: TPanel;
     PnlTop: TPanel;
     Sb: TStatusBar;
     Sp01: TShape;
+    procedure BtnMenusClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -38,6 +40,10 @@ implementation
 procedure TFrmPrincipal.FormCreate(Sender: TObject);
 begin
 
+end;
+procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
+begin
+  PnlEdquerdo.Visible:= false;
 end;
 
 end.

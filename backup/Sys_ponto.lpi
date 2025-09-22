@@ -45,6 +45,7 @@
         <Filename Value="u_principal.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmPrincipal"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
