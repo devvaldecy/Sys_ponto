@@ -1,0 +1,9 @@
+object Form1: TForm1
+  Left = 293
+  Height = 538
+  Top = 113
+  Width = 803
+  Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
+  Position = poDesktopCenter
+  LCLVersion = '4.2.0.0'
+end
