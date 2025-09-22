@@ -1,9 +1,58 @@
-object Form1: TForm1
-  Left = 293
-  Height = 538
-  Top = 113
-  Width = 803
+object FrmPrincipal: TFrmPrincipal
+  Left = 295
+  Height = 583
+  Top = 99
+  Width = 850
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
+  ClientHeight = 583
+  ClientWidth = 850
   Position = poDesktopCenter
   LCLVersion = '4.2.0.0'
+  OnCreate = FormCreate
+  object Sb: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 560
+    Width = 850
+    Panels = <>
+  end
+  object PnlTop: TPanel
+    Left = 0
+    Height = 64
+    Top = 0
+    Width = 850
+    Align = alTop
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 496
+    Top = 64
+    Width = 170
+    Align = alLeft
+    BevelInner = bvLowered
+    TabOrder = 2
+  end
+  object Sp01: TShape
+    Left = 192
+    Height = 2
+    Top = 100
+    Width = 633
+  end
+  object Label1: TLabel
+    Left = 192
+    Height = 25
+    Top = 69
+    Width = 92
+    Caption = 'Sys_ponto'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
 end
