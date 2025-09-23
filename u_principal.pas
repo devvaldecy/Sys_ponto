@@ -80,12 +80,8 @@ end;
 
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
-  PnlEsquerdo.Visible:= false;
-  //if PnlEsquerdo.Visible := false
-  //then
-  //begin
-  //  PnlEsquerdo.Visible:= true;
-  //end;
+  // Rotina pra esconder e mostra o menu ...
+  PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
 end;
 
 procedure TFrmPrincipal.BitBtn7Click(Sender: TObject);

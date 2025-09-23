@@ -80,7 +80,8 @@ end;
 
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
-  ////PnlEsquerdo.Visible:= false;
+  //PnlEsquerdo.Visible:= false;
+  PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
   //if PnlEsquerdo.Visible := false
   //then
   //begin
