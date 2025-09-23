@@ -1,13 +1,14 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 252
+  Left = 407
   Height = 583
-  Top = 85
+  Top = 87
   Width = 890
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
   ClientHeight = 583
   ClientWidth = 890
-  OnCreate = FormCreate
   Position = poDesktopCenter
+  LCLVersion = '4.2.0.0'
+  OnCreate = FormCreate
   object Sb: TStatusBar
     Left = 0
     Height = 23
@@ -530,13 +531,13 @@ object FrmPrincipal: TFrmPrincipal
     ClientHeight = 456
     ClientWidth = 170
     TabOrder = 2
-    object BitBtn1: TBitBtn
+    object BtnFuncionarios: TBitBtn
       Left = 2
       Height = 43
       Top = 2
       Width = 166
       Align = alTop
-      Caption = '&FUNCIONÁRIOS'
+      Caption = '&FUNCIONÁRIOS    '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -749,13 +750,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 0
     end
-    object BitBtn2: TBitBtn
+    object BtnConfig: TBitBtn
       Left = 2
       Height = 43
       Top = 217
       Width = 166
       Align = alTop
-      Caption = '&CONFIG              '
+      Caption = '&CONFIG                  '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -1081,13 +1082,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 1
     end
-    object BitBtn3: TBitBtn
+    object BtnTeste01: TBitBtn
       Left = 2
       Height = 43
       Top = 174
       Width = 166
       Align = alTop
-      Caption = '&TESTE 01           '
+      Caption = '&TESTE 01                '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -1300,13 +1301,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 2
     end
-    object BitBtn4: TBitBtn
+    object BtnTeste: TBitBtn
       Left = 2
       Height = 43
       Top = 131
       Width = 166
       Align = alTop
-      Caption = '&TESTE                   '
+      Caption = '&TESTE                     '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -1632,13 +1633,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 3
     end
-    object BitBtn5: TBitBtn
+    object BtnRelatorios: TBitBtn
       Left = 2
       Height = 43
       Top = 88
       Width = 166
       Align = alTop
-      Caption = '&RELATÓRIOS    '
+      Caption = '&RELATÓRIOS           '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -1804,13 +1805,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 4
     end
-    object BitBtn6: TBitBtn
+    object BtnRegistro: TBitBtn
       Left = 2
       Height = 43
       Top = 45
       Width = 166
       Align = alTop
-      Caption = 'RE&GISTRO         '
+      Caption = 'RE&GISTRO              '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -2023,13 +2024,13 @@ object FrmPrincipal: TFrmPrincipal
       ParentFont = False
       TabOrder = 5
     end
-    object BitBtn7: TBitBtn
+    object BtnSair: TBitBtn
       Left = 2
       Height = 43
       Top = 411
       Width = 166
       Align = alBottom
-      Caption = '&SAIR              '
+      Caption = '&SAIR                       '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -2352,17 +2353,17 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
-      OnClick = BitBtn7Click
       ParentFont = False
       TabOrder = 6
+      OnClick = BtnSairClick
     end
-    object BitBtn8: TBitBtn
+    object BtnSobre: TBitBtn
       Left = 2
       Height = 43
       Top = 260
       Width = 166
       Align = alTop
-      Caption = '&SOBRE               '
+      Caption = '&SOBRE                   '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable
@@ -2703,7 +2704,7 @@ object FrmPrincipal: TFrmPrincipal
     Height = 43
     Top = 518
     Width = 171
-    Caption = '&MENUS        '
+    Caption = '&MENUS                   '
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
     Font.Pitch = fpVariable
@@ -2913,9 +2914,9 @@ object FrmPrincipal: TFrmPrincipal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000
     }
-    OnClick = BtnMenusClick
     ParentFont = False
     TabOrder = 3
+    OnClick = BtnMenusClick
   end
   object TmHorarios: TTimer
     OnTimer = TmHorariosTimer
