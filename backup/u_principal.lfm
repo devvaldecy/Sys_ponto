@@ -1,7 +1,7 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 407
+  Left = 267
   Height = 583
-  Top = 87
+  Top = 39
   Width = 890
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
   ClientHeight = 583
@@ -263,7 +263,7 @@ object FrmPrincipal: TFrmPrincipal
         ParentFont = False
       end
       object Lbldata01: TLabel
-        Left = 56
+        Left = 57
         Height = 20
         Top = 3
         Width = 86
@@ -291,7 +291,7 @@ object FrmPrincipal: TFrmPrincipal
         ParentFont = False
       end
       object LblHora01: TLabel
-        Left = 56
+        Left = 57
         Height = 20
         Top = 21
         Width = 62
@@ -319,7 +319,7 @@ object FrmPrincipal: TFrmPrincipal
         ParentFont = False
       end
       object LblHora2: TLabel
-        Left = 56
+        Left = 57
         Height = 20
         Top = 40
         Width = 53
@@ -526,16 +526,16 @@ object FrmPrincipal: TFrmPrincipal
     Left = 1
     Height = 456
     Top = 64
-    Width = 170
+    Width = 171
     BevelInner = bvLowered
     ClientHeight = 456
-    ClientWidth = 170
+    ClientWidth = 171
     TabOrder = 2
     object BtnFuncionarios: TBitBtn
       Left = 2
       Height = 43
       Top = 2
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&FUNCIONÁRIOS    '
       Font.CharSet = ANSI_CHARSET
@@ -754,7 +754,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 217
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&CONFIG                  '
       Font.CharSet = ANSI_CHARSET
@@ -1086,7 +1086,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 174
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&TESTE 01                '
       Font.CharSet = ANSI_CHARSET
@@ -1305,7 +1305,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 131
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&TESTE                     '
       Font.CharSet = ANSI_CHARSET
@@ -1637,7 +1637,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 88
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&RELATÓRIOS           '
       Font.CharSet = ANSI_CHARSET
@@ -1809,7 +1809,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 45
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = 'RE&GISTRO              '
       Font.CharSet = ANSI_CHARSET
@@ -2028,7 +2028,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 411
-      Width = 166
+      Width = 167
       Align = alBottom
       Caption = '&SAIR                       '
       Font.CharSet = ANSI_CHARSET
@@ -2361,7 +2361,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 260
-      Width = 166
+      Width = 167
       Align = alTop
       Caption = '&SOBRE                   '
       Font.CharSet = ANSI_CHARSET
