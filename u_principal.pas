@@ -22,18 +22,30 @@ type
     BitBtn7: TBitBtn;
     BitBtn8: TBitBtn;
     BtnMenus: TBitBtn;
+    ImgLogo: TImage;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    LblHora01: TLabel;
+    LblHora2: TLabel;
+    llbData: TLabel;
+    Lbldata01: TLabel;
+    llbHora: TLabel;
+    llbHora1: TLabel;
+    PnlTopCenter: TPanel;
+    PnlLogo: TPanel;
     PnlDados: TPanel;
     PnlEsquerdo: TPanel;
     PnlTop: TPanel;
     Sb: TStatusBar;
     Sp01: TShape;
     SpeedButton1: TSpeedButton;
+    TmHorarios: TTimer;
     procedure BitBtn7Click(Sender: TObject);
     procedure BtnMenusClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure TmHorariosTimer(Sender: TObject);
   private
 
   public
@@ -59,9 +71,16 @@ begin
   Application.Terminate;
 end;
 
+procedure TFrmPrincipal.TmHorariosTimer(Sender: TObject);
+begin
+  // Informa a data e hora no PANEL...
+  Lbldata01.Caption := FormatDateTime('DD/MM/YYYY', now);
+  LblHora01.Caption := FormatDateTime('HH:MM:SS', now);
+end;
+
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
-  ////PnlEsquerdo.Visible:= false;
+  PnlEsquerdo.Visible:= false;
   //if PnlEsquerdo.Visible := false
   //then
   //begin
