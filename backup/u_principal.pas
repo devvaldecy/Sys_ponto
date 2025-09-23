@@ -49,11 +49,12 @@ type
   private
 
   public
-
+    procedure EsconderMenu();
   end;
 
 var
   FrmPrincipal: TFrmPrincipal;
+  Escondido: Boolean;
 
 implementation
 
@@ -78,11 +79,42 @@ begin
   LblHora01.Caption := FormatDateTime('HH:MM:SS', now);
 end;
 
+procedure TFrmPrincipal.EsconderMenu;
+begin
+  if Escondido then
+  begin
+    BtnFuncionarios.Caption:= '';
+    BtnRegistro.Caption    := '';
+    BtnRelatorios.Caption  := '';
+    BtnTeste.Caption       := '';
+    BtnTeste01.Caption     := '';
+    BtnConfig.Caption      := '';
+    BtnSobre.Caption       := '';
+    BtnSair.Caption        := '';
+    PnlEsquerdo.Width      := 60;
+  end else
+  begin
+    BtnFuncionarios.Caption:= 'Funcionários';
+    BtnRegistro.Caption    := 'Registro';
+    BtnRelatorios.Caption  := 'Relatórios';
+    BtnTeste.Caption       := 'Teste';
+    BtnTeste01.Caption     := 'Teste 01';
+    BtnConfig.Caption      := 'Config';
+    BtnSobre.Caption       := 'Sobre';
+    BtnSair.Caption        := 'Sair';
+    PnlEsquerdo.Width      := 171;
+  end;
+end;
+
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
   // Rotina pra esconder e mostra o menu ...
-  BtnFuncionarios.Caption:='';
-  PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
+  //BtnFuncionarios.Caption:='';
+  //PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
+
+  //outra rotina
+  Escondido := not Escondido;
+  EsconderMenu();
 end;
 
 procedure TFrmPrincipal.BtnSairClick(Sender: TObject);

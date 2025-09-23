@@ -1,7 +1,7 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 267
+  Left = 321
   Height = 583
-  Top = 39
+  Top = 74
   Width = 890
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
   ClientHeight = 583
@@ -2711,8 +2711,7 @@ object FrmPrincipal: TFrmPrincipal
     Left = 1
     Height = 43
     Top = 518
-    Width = 171
-    Caption = '&MENUS                   '
+    Width = 50
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
     Font.Pitch = fpVariable
