@@ -108,10 +108,6 @@ end;
 
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
-  // Rotina pra esconder e mostra o menu ...
-  //BtnFuncionarios.Caption:='';
-  //PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
-
   //outra rotina
   Escondido := not Escondido;
   EsconderMenu();

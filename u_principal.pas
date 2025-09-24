@@ -91,7 +91,7 @@ begin
     BtnConfig.Caption      := '';
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
-    PnlEsquerdo.Width      := 50;
+    PnlEsquerdo.Width      := 60;
   end else
   begin
     BtnFuncionarios.Caption:= 'Funcionários';
@@ -108,10 +108,6 @@ end;
 
 procedure TFrmPrincipal.BtnMenusClick(Sender: TObject);
 begin
-  // Rotina pra esconder e mostra o menu ...
-  //BtnFuncionarios.Caption:='';
-  //PnlEsquerdo.Visible:= not PnlEsquerdo.Visible;
-
   //outra rotina
   Escondido := not Escondido;
   EsconderMenu();

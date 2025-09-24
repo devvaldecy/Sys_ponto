@@ -1,7 +1,7 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 267
+  Left = 377
   Height = 583
-  Top = 39
+  Top = 87
   Width = 890
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
   ClientHeight = 583
@@ -747,6 +747,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 0
     end
@@ -1079,6 +1080,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 1
     end
@@ -1298,6 +1300,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 2
     end
@@ -1630,6 +1633,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 3
     end
@@ -1802,6 +1806,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         000000000000000000000000000000000000000000000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 4
     end
@@ -2021,6 +2026,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 5
     end
@@ -2353,6 +2359,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 6
       OnClick = BtnSairClick
@@ -2661,22 +2668,23 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      Margin = 1
       ParentFont = False
       TabOrder = 7
     end
   end
   object Sp01: TShape
-    Left = 192
-    Height = 1
-    Top = 95
-    Width = 686
+    Left = 633
+    Height = 5
+    Top = 96
+    Width = 245
   end
   object Label1: TLabel
-    Left = 192
+    Left = 633
     Height = 25
     Top = 69
-    Width = 92
-    Caption = 'Sys_ponto'
+    Width = 105
+    Caption = 'Sys_ponto -'
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -19
@@ -2701,10 +2709,9 @@ object FrmPrincipal: TFrmPrincipal
   end
   object BtnMenus: TBitBtn
     Left = 1
-    Height = 43
-    Top = 518
-    Width = 171
-    Caption = '&MENUS                   '
+    Height = 40
+    Top = 520
+    Width = 61
     Font.CharSet = ANSI_CHARSET
     Font.Height = -15
     Font.Pitch = fpVariable
@@ -2914,6 +2921,7 @@ object FrmPrincipal: TFrmPrincipal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000
     }
+    Margin = 7
     ParentFont = False
     TabOrder = 3
     OnClick = BtnMenusClick
