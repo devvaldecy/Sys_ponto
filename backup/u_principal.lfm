@@ -747,7 +747,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 0
     end
@@ -1080,7 +1080,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 1
     end
@@ -1300,7 +1300,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 2
     end
@@ -1633,7 +1633,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 3
     end
@@ -1806,7 +1806,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         000000000000000000000000000000000000000000000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 4
     end
@@ -2026,7 +2026,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 5
     end
@@ -2359,7 +2359,7 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 6
       OnClick = BtnSairClick
@@ -2668,14 +2668,14 @@ object FrmPrincipal: TFrmPrincipal
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      Margin = 1
+      Margin = 2
       ParentFont = False
       TabOrder = 7
     end
   end
   object Sp01: TShape
     Left = 633
-    Height = 8
+    Height = 5
     Top = 96
     Width = 245
   end
@@ -2921,7 +2921,7 @@ object FrmPrincipal: TFrmPrincipal
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000
     }
-    Margin = 7
+    Margin = 8
     ParentFont = False
     TabOrder = 3
     OnClick = BtnMenusClick
