@@ -91,6 +91,8 @@ begin
     BtnConfig.Caption      := '';
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
+    BtnMenus.Caption       := '';
+    BtnMenus.Width         := 55;
     PnlEsquerdo.Width      := 55;
   end else
   begin
@@ -102,6 +104,8 @@ begin
     BtnConfig.Caption      := 'CONFIG';
     BtnSobre.Caption       := 'SOBRE';
     BtnSair.Caption        := 'SAIR';
+    BtnMenus.Caption       := 'OCULTAR';
+    BtnMenus.Width         := 171;
     PnlEsquerdo.Width      := 171;
   end;
 end;

@@ -1,7 +1,7 @@
 object FrmPrincipal: TFrmPrincipal
-  Left = 443
+  Left = 378
   Height = 583
-  Top = 102
+  Top = 88
   Width = 890
   Caption = 'Sys_ponto - SISTEMA DE CONTROLE PONTO'
   ClientHeight = 583
