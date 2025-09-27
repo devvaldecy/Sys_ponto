@@ -91,7 +91,7 @@ begin
     BtnConfig.Caption      := '';
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
-    PnlEsquerdo.Width      := 61;
+    PnlEsquerdo.Width      := 55;
   end else
   begin
     BtnFuncionarios.Caption:= 'FUNCIONARIOS';

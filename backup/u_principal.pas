@@ -91,17 +91,17 @@ begin
     BtnConfig.Caption      := '';
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
-    PnlEsquerdo.Width      := 61;
+    PnlEsquerdo.Width      := 55;
   end else
   begin
-    BtnFuncionarios.Caption:= 'Funcionários';
-    BtnRegistro.Caption    := 'Registro';
-    BtnRelatorios.Caption  := 'Relatórios';
-    BtnTeste.Caption       := 'Teste';
-    BtnTeste01.Caption     := 'Teste 01';
-    BtnConfig.Caption      := 'Config';
-    BtnSobre.Caption       := 'Sobre';
-    BtnSair.Caption        := 'Sair';
+    BtnFuncionarios.Caption:= 'FUNCIONARIOS';
+    BtnRegistro.Caption    := 'REGISTRAR';
+    BtnRelatorios.Caption  := 'RELATÓRIOS';
+    BtnTeste.Caption       := 'SETOR';
+    BtnTeste01.Caption     := 'LOJAS';
+    BtnConfig.Caption      := 'CONFIG';
+    BtnSobre.Caption       := 'SOBRE';
+    BtnSair.Caption        := 'SAIR';
     PnlEsquerdo.Width      := 171;
   end;
 end;
