@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls, Buttons;
+  StdCtrls, Buttons, usobre;
 
 type
 
@@ -43,6 +43,7 @@ type
     TmHorarios: TTimer;
     procedure BtnSairClick(Sender: TObject);
     procedure BtnMenusClick(Sender: TObject);
+    procedure BtnSobreClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure TmHorariosTimer(Sender: TObject);
@@ -115,6 +116,16 @@ begin
   //outra rotina
   Escondido := not Escondido;
   EsconderMenu();
+end;
+
+procedure TFrmPrincipal.BtnSobreClick(Sender: TObject);
+begin
+  frmSobre := TfrmSobre.Create(Self);
+  try
+    frmSobre.ShowModal;
+  finally
+    FreeAndNil(frmSobre);
+  end;
 end;
 
 procedure TFrmPrincipal.BtnSairClick(Sender: TObject);

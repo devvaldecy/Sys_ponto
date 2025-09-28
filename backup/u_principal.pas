@@ -91,7 +91,7 @@ begin
     BtnConfig.Caption      := '';
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
-    BtnMenus.Caption       := 'MOSTRAR';
+    BtnMenus.Caption       := '';
     BtnMenus.Width         := 55;
     PnlEsquerdo.Width      := 55;
   end else

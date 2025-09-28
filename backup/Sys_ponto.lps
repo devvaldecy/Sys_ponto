@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="98"/>
+        <UsageCount Value="99"/>
       </Unit>
       <Unit>
         <Filename Value="u_principal.pas"/>
@@ -21,18 +21,25 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="77"/>
-        <CursorPos X="39" Y="107"/>
-        <UsageCount Value="98"/>
+        <TopLine Value="112"/>
+        <CursorPos X="24" Y="123"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="u_principal.pas"/>
-        <Caret Line="67" Column="31" TopLine="50"/>
-      </Position>
       <Position>
         <Filename Value="u_principal.pas"/>
         <Caret Line="64" Column="5" TopLine="54"/>
@@ -148,6 +155,10 @@
       <Position>
         <Filename Value="u_principal.pas"/>
         <Caret Line="111" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="u_principal.pas"/>
+        <Caret Line="95" Column="32" TopLine="78"/>
       </Position>
     </JumpHistory>
     <RunParams>
