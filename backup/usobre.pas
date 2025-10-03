@@ -32,6 +32,7 @@ type
     pnlLeste: TPanel;
     BtnFechar: TSpeedButton;
     Shape1: TShape;
+    Shape2: TShape;
     shLinha: TShape;
     BtnSair: TSpeedButton;
     procedure BtnFecharClick(Sender: TObject);

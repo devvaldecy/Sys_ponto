@@ -55,6 +55,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="u_cadpadrao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="f_cadpadrao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -7,8 +7,6 @@ object FrmPrincipal: TFrmPrincipal
   ClientHeight = 583
   ClientWidth = 890
   Position = poDesktopCenter
-  LCLVersion = '4.2.0.0'
-  OnCreate = FormCreate
   object Sb: TStatusBar
     Left = 0
     Height = 23
@@ -337,17 +335,17 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 60
       Top = 2
-      Width = 170
+      Width = 156
       Align = alLeft
       BevelInner = bvLowered
       ClientHeight = 60
-      ClientWidth = 170
+      ClientWidth = 156
       TabOrder = 1
       object ImgLogo: TImage
         Left = 2
         Height = 56
         Top = 2
-        Width = 166
+        Width = 152
         Align = alClient
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963BA11000089504E47
@@ -498,14 +496,14 @@ object FrmPrincipal: TFrmPrincipal
       end
     end
     object PnlTopCenter: TPanel
-      Left = 172
+      Left = 158
       Height = 60
       Top = 2
-      Width = 546
+      Width = 560
       Align = alClient
       BevelInner = bvLowered
       ClientHeight = 60
-      ClientWidth = 546
+      ClientWidth = 560
       TabOrder = 2
       object Label3: TLabel
         Left = 144
@@ -526,16 +524,16 @@ object FrmPrincipal: TFrmPrincipal
     Left = 1
     Height = 456
     Top = 64
-    Width = 171
+    Width = 156
     BevelInner = bvLowered
     ClientHeight = 456
-    ClientWidth = 171
+    ClientWidth = 156
     TabOrder = 2
     object BtnFuncionarios: TBitBtn
       Left = 2
       Height = 43
       Top = 2
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&FUNCIONÁRIOS    '
       Font.CharSet = ANSI_CHARSET
@@ -708,7 +706,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 217
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&CONFIG                  '
       Font.CharSet = ANSI_CHARSET
@@ -874,6 +872,7 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
+      OnClick = BtnConfigClick
       ParentFont = False
       TabOrder = 1
     end
@@ -881,7 +880,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 174
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&LOJAS                '
       Font.CharSet = ANSI_CHARSET
@@ -1054,7 +1053,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 131
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&SETOR                     '
       Font.CharSet = ANSI_CHARSET
@@ -1227,7 +1226,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 88
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&RELATÓRIOS           '
       Font.CharSet = ANSI_CHARSET
@@ -1400,7 +1399,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 45
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = 'RE&GISTRO              '
       Font.CharSet = ANSI_CHARSET
@@ -1573,7 +1572,7 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 43
       Top = 411
-      Width = 167
+      Width = 152
       Align = alBottom
       Caption = '&SAIR                       '
       Font.CharSet = ANSI_CHARSET
@@ -1739,15 +1738,15 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
+      OnClick = BtnSairClick
       ParentFont = False
       TabOrder = 6
-      OnClick = BtnSairClick
     end
     object BtnSobre: TBitBtn
       Left = 2
       Height = 43
       Top = 260
-      Width = 167
+      Width = 152
       Align = alTop
       Caption = '&SOBRE                   '
       Font.CharSet = ANSI_CHARSET
@@ -1913,6 +1912,7 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
+      OnClick = BtnSobreClick
       ParentFont = False
       TabOrder = 7
     end
@@ -2119,9 +2119,9 @@ object FrmPrincipal: TFrmPrincipal
       000000000000000000000000000000000000000000000000000000000000
     }
     Margin = 8
+    OnClick = BtnMenusClick
     ParentFont = False
     TabOrder = 3
-    OnClick = BtnMenusClick
   end
   object TmHorarios: TTimer
     OnTimer = TmHorariosTimer

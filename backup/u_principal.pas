@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls, Buttons;
+  StdCtrls, Buttons, u_cadpadrao, usobre;
 
 type
 
@@ -41,9 +41,10 @@ type
     Sp01: TShape;
     SpeedButton1: TSpeedButton;
     TmHorarios: TTimer;
+    procedure BtnConfigClick(Sender: TObject);
     procedure BtnSairClick(Sender: TObject);
     procedure BtnMenusClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure BtnSobreClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure TmHorariosTimer(Sender: TObject);
   private
@@ -56,16 +57,9 @@ var
   FrmPrincipal: TFrmPrincipal;
   Escondido: Boolean;
 
-implementation
-
 {$R *.lfm}
-
+implementation
 { TFrmPrincipal }
-
-procedure TFrmPrincipal.FormCreate(Sender: TObject);
-begin
-
-end;
 
 procedure TFrmPrincipal.SpeedButton1Click(Sender: TObject);
 begin
@@ -92,8 +86,8 @@ begin
     BtnSobre.Caption       := '';
     BtnSair.Caption        := '';
     BtnMenus.Caption       := '';
-    BtnMenus.Width         := 55;
-    PnlEsquerdo.Width      := 55;
+    BtnMenus.Width         := 58;
+    PnlEsquerdo.Width      := 58;
   end else
   begin
     BtnFuncionarios.Caption:= 'FUNCIONARIOS';
@@ -105,8 +99,8 @@ begin
     BtnSobre.Caption       := 'SOBRE';
     BtnSair.Caption        := 'SAIR';
     BtnMenus.Caption       := 'OCULTAR';
-    BtnMenus.Width         := 171;
-    PnlEsquerdo.Width      := 171;
+    BtnMenus.Width         := 156;
+    PnlEsquerdo.Width      := 156;
   end;
 end;
 
@@ -117,12 +111,32 @@ begin
   EsconderMenu();
 end;
 
+procedure TFrmPrincipal.BtnSobreClick(Sender: TObject);
+begin
+  frmSobre := TfrmSobre.Create(Self);
+  try
+    frmSobre.ShowModal;
+  finally
+    FreeAndNil(frmSobre);
+  end;
+end;
+
 procedure TFrmPrincipal.BtnSairClick(Sender: TObject);
 begin
     if MessageDlg ( ' Até breve .......... ' , 'Informação do Sistema ?' , mtConfirmation ,
                  [ mbYes , mbNo ] , 0 )  = mrYes
     then  {Execute resto do programa}
    Application.Terminate;
+end;
+
+procedure TFrmPrincipal.BtnConfigClick(Sender: TObject);
+begin
+  f_cadpadrao := Tf_cadpadrao.Create(Self);
+  try
+    f_cadpadrao.ShowModal;
+  finally
+    FreeAndNil(f_cadpadrao);
+  end;
 end;
 
 end.

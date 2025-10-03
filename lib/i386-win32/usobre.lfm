@@ -1,32 +1,32 @@
 object frmSobre: TfrmSobre
   Left = 257
-  Height = 289
+  Height = 269
   Top = 250
-  Width = 646
+  Width = 618
   BorderStyle = bsNone
   Caption = 'Sobre o Sistema'
-  ClientHeight = 289
-  ClientWidth = 646
+  ClientHeight = 269
+  ClientWidth = 618
   Position = poMainFormCenter
   object pnlCentro: TPanel
     Left = 0
-    Height = 289
+    Height = 269
     Top = 0
-    Width = 646
+    Width = 618
     Align = alClient
     BevelInner = bvLowered
-    ClientHeight = 289
-    ClientWidth = 646
+    ClientHeight = 269
+    ClientWidth = 618
     TabOrder = 0
     object pnlTop: TPanel
       Left = 2
       Height = 23
       Top = 2
-      Width = 642
+      Width = 614
       Align = alTop
       BevelOuter = bvNone
       ClientHeight = 23
-      ClientWidth = 642
+      ClientWidth = 614
       Color = 13477943
       Font.CharSet = ANSI_CHARSET
       Font.Height = -19
@@ -38,7 +38,7 @@ object frmSobre: TfrmSobre
       ParentFont = False
       TabOrder = 0
       object BtnFechar: TSpeedButton
-        Left = 621
+        Left = 593
         Height = 23
         Top = 0
         Width = 21
@@ -259,20 +259,19 @@ object frmSobre: TfrmSobre
     end
     object pnlLeste: TPanel
       Left = 2
-      Height = 262
+      Height = 242
       Top = 25
-      Width = 329
+      Width = 302
       Align = alLeft
       BevelOuter = bvNone
-      ClientHeight = 262
-      ClientWidth = 329
+      ClientHeight = 242
+      ClientWidth = 302
       TabOrder = 1
       object Image1: TImage
         Left = 0
         Height = 262
         Top = 0
-        Width = 329
-        Align = alClient
+        Width = 300
         Picture.Data = {
           0A544A706567496D61676551360000FFD8FFE000104A46494600010101006000
           600000FFDB004300020101020101020202020202020203050303030303060404
@@ -715,14 +714,14 @@ object frmSobre: TfrmSobre
     object shLinha: TShape
       Left = 332
       Height = 1
-      Top = 235
+      Top = 213
       Width = 305
     end
     object BtnSair: TSpeedButton
-      Left = 540
-      Height = 37
-      Top = 245
-      Width = 100
+      Left = 514
+      Height = 34
+      Top = 228
+      Width = 98
       Caption = '&Fechar'
       Glyph.Data = {
         460E0000424D460E00000000000036000000280000001E0000001E0000000100
@@ -844,33 +843,33 @@ object frmSobre: TfrmSobre
       OnClick = BtnSairClick
     end
     object Label1: TLabel
-      Left = 334
+      Left = 308
       Height = 15
-      Top = 268
+      Top = 247
       Width = 206
       Caption = 'Copyright 2025 © Empresa Informática'
     end
     object Label2: TLabel
-      Left = 334
+      Left = 308
       Height = 15
-      Top = 237
+      Top = 216
       Width = 102
       Caption = 'Direitos Reservados'
     end
     object Label4: TLabel
-      Left = 334
+      Left = 308
       Height = 15
-      Top = 252
+      Top = 231
       Width = 119
       Caption = 'Brasil - Piauí - Teresina'
     end
     object Panel1: TPanel
-      Left = 334
-      Height = 198
-      Top = 30
+      Left = 304
+      Height = 175
+      Top = 28
       Width = 307
       BevelInner = bvLowered
-      ClientHeight = 198
+      ClientHeight = 175
       ClientWidth = 307
       Font.CharSet = ANSI_CHARSET
       Font.Pitch = fpVariable
@@ -895,7 +894,7 @@ object frmSobre: TfrmSobre
       object Label5: TLabel
         Left = 82
         Height = 15
-        Top = 42
+        Top = 40
         Width = 148
         Caption = 'Sistema de Controle Ponto'
         Font.CharSet = ANSI_CHARSET
@@ -905,9 +904,9 @@ object frmSobre: TfrmSobre
         ParentFont = False
       end
       object Label7: TLabel
-        Left = 88
+        Left = 96
         Height = 15
-        Top = 160
+        Top = 136
         Width = 43
         Caption = 'Versão.:'
         Font.CharSet = ANSI_CHARSET
@@ -917,11 +916,11 @@ object frmSobre: TfrmSobre
         ParentFont = False
       end
       object Label8: TLabel
-        Left = 152
+        Left = 131
         Height = 15
-        Top = 160
-        Width = 44
-        Caption = '1.0.0.58'
+        Top = 136
+        Width = 49
+        Caption = '    1.0.0.0'
         Font.CharSet = ANSI_CHARSET
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
@@ -949,9 +948,9 @@ object frmSobre: TfrmSobre
         ParentFont = False
       end
       object Label11: TLabel
-        Left = 92
+        Left = 96
         Height = 15
-        Top = 129
+        Top = 120
         Width = 71
         Caption = 'Valdecy Silva'
         Font.CharSet = ANSI_CHARSET
@@ -961,9 +960,9 @@ object frmSobre: TfrmSobre
         ParentFont = False
       end
       object Label12: TLabel
-        Left = 92
+        Left = 94
         Height = 15
-        Top = 113
+        Top = 104
         Width = 86
         Caption = 'Sanatiel Gomes'
         Font.CharSet = ANSI_CHARSET
@@ -971,6 +970,13 @@ object frmSobre: TfrmSobre
         Font.Quality = fqDraft
         Font.Style = [fsBold, fsUnderline]
         ParentFont = False
+      end
+      object Shape2: TShape
+        Left = 11
+        Height = 16
+        Top = 152
+        Width = 289
+        Brush.Color = clMoneyGreen
       end
     end
   end
