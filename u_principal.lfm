@@ -7,6 +7,7 @@ object FrmPrincipal: TFrmPrincipal
   ClientHeight = 583
   ClientWidth = 890
   Position = poDesktopCenter
+  LCLVersion = '4.2.0.0'
   object Sb: TStatusBar
     Left = 0
     Height = 23
@@ -872,9 +873,9 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
-      OnClick = BtnConfigClick
       ParentFont = False
       TabOrder = 1
+      OnClick = BtnConfigClick
     end
     object BtnTeste01: TBitBtn
       Left = 2
@@ -1738,9 +1739,9 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
-      OnClick = BtnSairClick
       ParentFont = False
       TabOrder = 6
+      OnClick = BtnSairClick
     end
     object BtnSobre: TBitBtn
       Left = 2
@@ -1912,9 +1913,9 @@ object FrmPrincipal: TFrmPrincipal
         000000000000000000000000000000000000000000000000000000000000
       }
       Margin = 5
-      OnClick = BtnSobreClick
       ParentFont = False
       TabOrder = 7
+      OnClick = BtnSobreClick
     end
   end
   object Sp01: TShape
@@ -2119,9 +2120,9 @@ object FrmPrincipal: TFrmPrincipal
       000000000000000000000000000000000000000000000000000000000000
     }
     Margin = 8
-    OnClick = BtnMenusClick
     ParentFont = False
     TabOrder = 3
+    OnClick = BtnMenusClick
   end
   object TmHorarios: TTimer
     OnTimer = TmHorariosTimer

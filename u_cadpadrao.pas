@@ -10,9 +10,9 @@ uses
 
 type
 
-  { Tf_cadpadrao }
+  { TFrmcadpadrao }
 
-  Tf_cadpadrao = class(TForm)
+  TFrmcadpadrao = class(TForm)
     BitBtn6: TBitBtn;
     BtnAlterar: TBitBtn;
     BtnCancelar: TBitBtn;
@@ -23,6 +23,7 @@ type
     PnlLest: TPanel;
     PnlTop: TPanel;
     procedure BitBtn6Click(Sender: TObject);
+    procedure BtnNovoClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
   private
 
@@ -31,15 +32,15 @@ type
   end;
 
 var
-  f_cadpadrao: Tf_cadpadrao;
+  Frmcadpadrao: TFrmcadpadrao;
 
 implementation
 
 {$R *.lfm}
 
-{ Tf_cadpadrao }
+{ TFrmcadpadrao }
 
-procedure Tf_cadpadrao.FormKeyPress(Sender: TObject; var Key: char);
+procedure TFrmcadpadrao.FormKeyPress(Sender: TObject; var Key: char);
 begin
   if key=#13 then begin
   SelectNext(ActiveControl as TWinControl,True,True);
@@ -47,9 +48,16 @@ begin
   end;
 end;
 
-procedure Tf_cadpadrao.BitBtn6Click(Sender: TObject);
+procedure TFrmcadpadrao.BitBtn6Click(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFrmcadpadrao.BtnNovoClick(Sender: TObject);
+begin
+  BtnSalvar.Enabled   := True;
+  BtnCancelar.Enabled := True;
+  BtnPesquisar.Enabled:= True;
 end;
 
 end.

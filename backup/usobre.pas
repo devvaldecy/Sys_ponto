@@ -10,9 +10,9 @@ uses
 
 type
 
-  { TfrmSobre }
+  { TFrmSobre }
 
-  TfrmSobre = class(TForm)
+  TFrmSobre = class(TForm)
     Image1: TImage;
     Label1: TLabel;
     Label10: TLabel;
@@ -44,20 +44,20 @@ type
   end;
 
 var
-  frmSobre: TfrmSobre;
+  FrmSobre: TFrmSobre;
 
 implementation
 
 {$R *.lfm}
 
-{ TfrmSobre }
+{ TFrmSobre }
 
-procedure TfrmSobre.BtnFecharClick(Sender: TObject);
+procedure TFrmSobre.BtnFecharClick(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TfrmSobre.BtnSairClick(Sender: TObject);
+procedure TFrmSobre.BtnSairClick(Sender: TObject);
 begin
   Close;
 end;

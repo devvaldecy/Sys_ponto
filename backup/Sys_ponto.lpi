@@ -51,14 +51,14 @@
       <Unit>
         <Filename Value="usobre.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="frmSobre"/>
+        <ComponentName Value="FrmSobre"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
         <Filename Value="u_cadpadrao.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="f_cadpadrao"/>
+        <ComponentName Value="Frmcadpadrao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>

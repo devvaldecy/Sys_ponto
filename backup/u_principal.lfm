@@ -335,17 +335,17 @@ object FrmPrincipal: TFrmPrincipal
       Left = 2
       Height = 60
       Top = 2
-      Width = 156
+      Width = 153
       Align = alLeft
       BevelInner = bvLowered
       ClientHeight = 60
-      ClientWidth = 156
+      ClientWidth = 153
       TabOrder = 1
       object ImgLogo: TImage
         Left = 2
         Height = 56
         Top = 2
-        Width = 152
+        Width = 149
         Align = alClient
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963BA11000089504E47
@@ -496,14 +496,14 @@ object FrmPrincipal: TFrmPrincipal
       end
     end
     object PnlTopCenter: TPanel
-      Left = 158
+      Left = 155
       Height = 60
       Top = 2
-      Width = 560
+      Width = 563
       Align = alClient
       BevelInner = bvLowered
       ClientHeight = 60
-      ClientWidth = 560
+      ClientWidth = 563
       TabOrder = 2
       object Label3: TLabel
         Left = 144

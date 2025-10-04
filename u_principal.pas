@@ -131,11 +131,11 @@ end;
 
 procedure TFrmPrincipal.BtnConfigClick(Sender: TObject);
 begin
-  f_cadpadrao := Tf_cadpadrao.Create(Self);
+  frmcadpadrao := Tfrmcadpadrao.Create(Self);
   try
-    f_cadpadrao.ShowModal;
+    frmcadpadrao.ShowModal;
   finally
-    FreeAndNil(f_cadpadrao);
+    FreeAndNil(frmcadpadrao);
   end;
 end;
 

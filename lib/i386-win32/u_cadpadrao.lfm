@@ -1,4 +1,4 @@
-object f_cadpadrao: Tf_cadpadrao
+object Frmcadpadrao: TFrmcadpadrao
   Left = 317
   Height = 330
   Top = 194
@@ -7,8 +7,9 @@ object f_cadpadrao: Tf_cadpadrao
   ClientHeight = 330
   ClientWidth = 615
   KeyPreview = True
-  OnKeyPress = FormKeyPress
   Position = poMainFormCenter
+  LCLVersion = '4.2.0.0'
+  OnKeyPress = FormKeyPress
   object PnlTop: TPanel
     Left = 0
     Height = 50
@@ -248,6 +249,7 @@ object f_cadpadrao: Tf_cadpadrao
       }
       ParentFont = False
       TabOrder = 0
+      OnClick = BtnNovoClick
     end
     object BtnSalvar: TBitBtn
       Left = 0
@@ -988,9 +990,9 @@ object f_cadpadrao: Tf_cadpadrao
         0000000000000000000000000000000000000000000000000000000000000000
         00000000000000000000
       }
-      OnClick = BitBtn6Click
       ParentFont = False
       TabOrder = 5
+      OnClick = BitBtn6Click
     end
     object BtnPesquisar: TBitBtn
       Left = 0
