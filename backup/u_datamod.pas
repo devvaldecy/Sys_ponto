@@ -5,10 +5,17 @@ unit u_datamod;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, ZConnection, ZDataset;
 
 type
+
+  { TFrmDM }
+
   TFrmDM = class(TDataModule)
+    zConecte: TZConnection;
+    zCADSET: TZQuery;
+    zTransacoes: TZTransaction;
+    procedure zConecteAfterConnect(Sender: TObject);
   private
 
   public
@@ -21,6 +28,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TFrmDM }
+
+procedure TFrmDM.zConecteAfterConnect(Sender: TObject);
+begin
+
+end;
 
 end.
 
