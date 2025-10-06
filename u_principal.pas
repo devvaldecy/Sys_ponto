@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls, Buttons, u_cadpadrao, usobre;
+  StdCtrls, Buttons, u_cadpadrao, u_cadsetor, usobre;
 
 type
 
@@ -45,6 +45,7 @@ type
     procedure BtnSairClick(Sender: TObject);
     procedure BtnMenusClick(Sender: TObject);
     procedure BtnSobreClick(Sender: TObject);
+    procedure BtnTesteClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure TmHorariosTimer(Sender: TObject);
   private
@@ -118,6 +119,16 @@ begin
     frmSobre.ShowModal;
   finally
     FreeAndNil(frmSobre);
+  end;
+end;
+
+procedure TFrmPrincipal.BtnTesteClick(Sender: TObject);
+begin
+  FrmCadSetor := TFrmCadSetor.Create(Self);
+  try
+    FrmCadSetor.Showmodal;
+  finally
+    FreeAndNil(FrmCadSetor);
   end;
 end;
 

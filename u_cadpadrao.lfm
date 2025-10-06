@@ -1,7 +1,7 @@
 object Frmcadpadrao: TFrmcadpadrao
-  Left = 317
+  Left = 353
   Height = 330
-  Top = 194
+  Top = 173
   Width = 615
   Caption = 'Formulário Padrão'
   ClientHeight = 330

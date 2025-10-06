@@ -1,0 +1,7 @@
+object FrmDM: TFrmDM
+  OldCreateOrder = False
+  Height = 235
+  HorizontalOffset = 337
+  VerticalOffset = 228
+  Width = 331
+end

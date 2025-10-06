@@ -23,6 +23,7 @@ type
     PnlLest: TPanel;
     PnlTop: TPanel;
     procedure BitBtn6Click(Sender: TObject);
+    procedure BtnNovoClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
   private
 
@@ -50,6 +51,13 @@ end;
 procedure TFrmcadpadrao.BitBtn6Click(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFrmcadpadrao.BtnNovoClick(Sender: TObject);
+begin
+  BtnSalvar.Enabled   := True;
+  BtnCancelar.Enabled := True;
+  BtnPesquisar.Enabled:= True;
 end;
 
 end.

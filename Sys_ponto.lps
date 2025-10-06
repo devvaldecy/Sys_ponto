@@ -9,7 +9,7 @@
         <Filename Value="Sys_ponto.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="111"/>
+        <UsageCount Value="199"/>
       </Unit>
       <Unit>
         <Filename Value="u_principal.pas"/>
@@ -17,9 +17,9 @@
         <ComponentName Value="FrmPrincipal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="115"/>
-        <CursorPos X="23" Y="134"/>
-        <UsageCount Value="111"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="46" Y="9"/>
+        <UsageCount Value="199"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -29,9 +29,9 @@
         <ComponentName Value="FrmSobre"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="7"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -41,22 +41,59 @@
         <ComponentName Value="Frmcadpadrao"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="34"/>
         <CursorPos X="30" Y="60"/>
+        <UsageCount Value="108"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_datamod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDM"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="15"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadsetor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadSetor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory HistoryIndex="5">
       <Position>
         <Filename Value="u_cadpadrao.pas"/>
       </Position>
       <Position>
         <Filename Value="u_cadpadrao.pas"/>
         <Caret Line="53" Column="9" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="u_principal.pas"/>
+        <Caret Line="140" Column="23" TopLine="112"/>
+      </Position>
+      <Position>
+        <Filename Value="u_principal.pas"/>
+        <Caret Line="127" Column="37" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="u_principal.pas"/>
+        <Caret Line="129" Column="21" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="u_principal.pas"/>
+        <Caret Line="131" Column="27" TopLine="115"/>
       </Position>
     </JumpHistory>
     <RunParams>

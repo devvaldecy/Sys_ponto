@@ -249,6 +249,7 @@ object Frmcadpadrao: TFrmcadpadrao
       }
       ParentFont = False
       TabOrder = 0
+      OnClick = BtnNovoClick
     end
     object BtnSalvar: TBitBtn
       Left = 0

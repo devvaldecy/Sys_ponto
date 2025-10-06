@@ -62,6 +62,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="u_datamod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDM"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="u_cadsetor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadSetor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

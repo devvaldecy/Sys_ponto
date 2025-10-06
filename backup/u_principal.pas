@@ -45,6 +45,7 @@ type
     procedure BtnSairClick(Sender: TObject);
     procedure BtnMenusClick(Sender: TObject);
     procedure BtnSobreClick(Sender: TObject);
+    procedure BtnTesteClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure TmHorariosTimer(Sender: TObject);
   private
@@ -121,6 +122,16 @@ begin
   end;
 end;
 
+procedure TFrmPrincipal.BtnTesteClick(Sender: TObject);
+begin
+  FrmCadSetor := TFrmCadSetor.Create(Self);
+  try
+    FrmCadSetor.Showmodal;
+  finally
+    FreeAndNil(FrmCadSetor);
+  end;
+end;
+
 procedure TFrmPrincipal.BtnSairClick(Sender: TObject);
 begin
     if MessageDlg ( ' Até breve .......... ' , 'Informação do Sistema ?' , mtConfirmation ,
@@ -131,11 +142,11 @@ end;
 
 procedure TFrmPrincipal.BtnConfigClick(Sender: TObject);
 begin
-  f_cadpadrao := Tf_cadpadrao.Create(Self);
+  frmcadpadrao := Tfrmcadpadrao.Create(Self);
   try
-    f_cadpadrao.ShowModal;
+    frmcadpadrao.ShowModal;
   finally
-    FreeAndNil(f_cadpadrao);
+    FreeAndNil(frmcadpadrao);
   end;
 end;
 
