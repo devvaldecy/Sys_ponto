@@ -17,13 +17,13 @@ object FrmDM: TFrmDM
     Database = 'C:\Users\admin\Documents\Projetos\Proj_Sysponto\Sys_ponto\Banco\db_teste'
     Protocol = 'sqlite'
     LibraryLocation = 'C:\Users\admin\Documents\Projetos\Proj_Sysponto\Sys_ponto\Dll\sqlite3.dll'
-    Left = 47
-    Top = 24
+    Left = 24
+    Top = 16
   end
   object zTransacoes: TZTransaction
     AutoCommit = True
-    Left = 112
-    Top = 24
+    Left = 96
+    Top = 16
   end
   object zCadset: TZQuery
     Connection = zConecte
@@ -31,7 +31,16 @@ object FrmDM: TFrmDM
       'Select * from setor;'
     )
     Params = <>
-    Left = 184
-    Top = 24
+    Left = 161
+    Top = 16
+  end
+  object zQconsultasetor: TZQuery
+    Connection = zConecte
+    SQL.Strings = (
+      'Select * from setor;'
+    )
+    Params = <>
+    Left = 240
+    Top = 16
   end
 end

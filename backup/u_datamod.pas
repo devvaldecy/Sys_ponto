@@ -13,7 +13,8 @@ type
 
   TFrmDM = class(TDataModule)
     zConecte: TZConnection;
-    zCADSET: TZQuery;
+    zCadset: TZQuery;
+    zQconsultasetor: TZQuery;
     zTransacoes: TZTransaction;
     procedure zConecteAfterConnect(Sender: TObject);
   private
