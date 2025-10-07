@@ -29,12 +29,14 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    LblRegistros1: TLabel;
     PageControl1: TPageControl;
     pgLancadados: TTabSheet;
     pgPesquisar: TTabSheet;
     procedure BitPesquisarClick(Sender: TObject);
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
   private
     procedure Habilitar;
     procedure Limpar;
@@ -55,6 +57,7 @@ procedure TFrmCadSetor.BtnNovoClick(Sender: TObject);
 begin
   inherited;
   PageControl1.ActivePage := pgLancadados;
+  EdtNome.SetFocus;
 end;
 
 procedure TFrmCadSetor.BitPesquisarClick(Sender: TObject);
@@ -97,6 +100,11 @@ end;
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
 begin
   PageControl1.ActivePage := pgPesquisar;
+end;
+
+procedure TFrmCadSetor.BtnSalvarClick(Sender: TObject);
+begin
+
 end;
 
 procedure TFrmCadSetor.Habilitar;

@@ -35,6 +35,7 @@ object FrmDM: TFrmDM
     Top = 16
   end
   object zQconsultasetor: TZQuery
+    Connection = zConecte
     SQL.Strings = (
       'Select * from setor;'
     )

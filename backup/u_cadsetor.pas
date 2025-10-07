@@ -29,6 +29,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    LblRegistros1: TLabel;
     PageControl1: TPageControl;
     pgLancadados: TTabSheet;
     pgPesquisar: TTabSheet;
@@ -55,6 +56,7 @@ procedure TFrmCadSetor.BtnNovoClick(Sender: TObject);
 begin
   inherited;
   PageControl1.ActivePage := pgLancadados;
+  EdtNome.SetFocus;
 end;
 
 procedure TFrmCadSetor.BitPesquisarClick(Sender: TObject);

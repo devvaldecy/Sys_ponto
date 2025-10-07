@@ -8,16 +8,40 @@ inherited FrmCadSetor: TFrmCadSetor
     Width = 556
     ClientWidth = 556
     object LblRegistros: TLabel[0]
-      Left = 504
-      Height = 15
-      Top = 16
-      Width = 6
+      Left = 518
+      Height = 17
+      Top = 26
+      Width = 7
       Caption = '0'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object LblRegistros1: TLabel[1]
+      Left = 493
+      Height = 17
+      Top = 6
+      Width = 57
+      Caption = 'Registros'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
     end
   end
   inherited PnlLest: TPanel
     inherited BtnNovo: TBitBtn
       OnClick = BtnNovoClick
+    end
+    inherited BtnSalvar: TBitBtn
+      OnClick = BtnSalvarClick
     end
     inherited BtnPesquisar: TBitBtn
       OnClick = BtnPesquisarClick
@@ -66,9 +90,9 @@ inherited FrmCadSetor: TFrmCadSetor
         TabOrder = 1
       end
       object BitPesquisar: TBitBtn
-        Left = 317
-        Height = 81
-        Top = -1
+        Left = 318
+        Height = 80
+        Top = 0
         Width = 108
         Caption = '&Pequisar'
         Glyph.Data = {
@@ -228,8 +252,8 @@ inherited FrmCadSetor: TFrmCadSetor
           0000000000000000000000000000000000000000000000000000000000000000
           000000000000000000000000000000000000000000000000000000000000
         }
-        TabOrder = 2
         OnClick = BitPesquisarClick
+        TabOrder = 2
       end
       object Label7: TLabel
         Left = 4
