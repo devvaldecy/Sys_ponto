@@ -1,14 +1,15 @@
 inherited FrmCadSetor: TFrmCadSetor
-  Width = 556
+  Width = 577
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Setores'
-  ClientWidth = 556
+  ClientWidth = 577
+  OnCreate = FormCreate
   inherited PnlTop: TPanel
-    Width = 556
-    ClientWidth = 556
+    Width = 577
+    ClientWidth = 577
     object LblRegistros: TLabel[0]
-      Left = 535
+      Left = 539
       Height = 17
       Top = 26
       Width = 7
@@ -22,9 +23,9 @@ inherited FrmCadSetor: TFrmCadSetor
       ParentFont = False
     end
     object LblRegistros1: TLabel[1]
-      Left = 495
+      Left = 514
       Height = 17
-      Top = 5
+      Top = 6
       Width = 57
       Caption = 'Registros'
       Font.CharSet = ANSI_CHARSET
@@ -40,6 +41,9 @@ inherited FrmCadSetor: TFrmCadSetor
     inherited BtnNovo: TBitBtn
       OnClick = BtnNovoClick
     end
+    inherited BtnSalvar: TBitBtn
+      OnClick = BtnSalvarClick
+    end
     inherited BtnPesquisar: TBitBtn
       OnClick = BtnPesquisarClick
     end
@@ -48,14 +52,14 @@ inherited FrmCadSetor: TFrmCadSetor
     Left = 122
     Height = 278
     Top = 50
-    Width = 434
+    Width = 456
     ActivePage = pgPesquisar
     TabIndex = 0
     TabOrder = 2
     object pgPesquisar: TTabSheet
       Caption = 'Consultar'
       ClientHeight = 250
-      ClientWidth = 426
+      ClientWidth = 448
       object Label2: TLabel
         Left = 4
         Height = 15
@@ -73,24 +77,63 @@ inherited FrmCadSetor: TFrmCadSetor
         Height = 23
         Top = 57
         Width = 312
-        TabOrder = 0
+        TabOrder = 1
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 165
-        Top = 85
-        Width = 426
+        Height = 168
+        Top = 82
+        Width = 448
         Align = alBottom
-        Color = clWindow
-        Columns = <>
+        Color = clForm
+        Columns = <        
+          item
+            Title.Font.CharSet = ANSI_CHARSET
+            Title.Font.Pitch = fpVariable
+            Title.Font.Quality = fqDraft
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'CÓDIGO'
+            Width = 55
+            FieldName = 'id'
+          end        
+          item
+            Title.Font.CharSet = ANSI_CHARSET
+            Title.Font.Pitch = fpVariable
+            Title.Font.Quality = fqDraft
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'DESCRIÇÃO'
+            Width = 150
+            FieldName = 'nome'
+          end        
+          item
+            Title.Font.CharSet = ANSI_CHARSET
+            Title.Font.Pitch = fpVariable
+            Title.Font.Quality = fqDraft
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'E-MAIL'
+            Width = 120
+            FieldName = 'email'
+          end        
+          item
+            Title.Color = clBtnFace
+            Title.Font.CharSet = ANSI_CHARSET
+            Title.Font.Pitch = fpVariable
+            Title.Font.Quality = fqDraft
+            Title.Font.Style = [fsBold]
+            Title.Caption = 'CONTATO'
+            Width = 80
+            FieldName = 'telefone'
+          end>
         DataSource = DSConsultar
-        TabOrder = 1
+        FixedColor = clActiveBorder
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgMultiselect]
+        TabOrder = 2
       end
       object BitPesquisar: TBitBtn
         Left = 318
         Height = 80
         Top = 0
-        Width = 108
+        Width = 130
         Caption = '&Pequisar'
         Glyph.Data = {
           5A130000424D5A13000000000000360000002800000023000000230000000100
@@ -249,8 +292,8 @@ inherited FrmCadSetor: TFrmCadSetor
           0000000000000000000000000000000000000000000000000000000000000000
           000000000000000000000000000000000000000000000000000000000000
         }
+        TabOrder = 3
         OnClick = BitPesquisarClick
-        TabOrder = 2
       end
       object Label7: TLabel
         Left = 4
@@ -269,19 +312,21 @@ inherited FrmCadSetor: TFrmCadSetor
         Height = 23
         Top = 15
         Width = 124
+        BorderStyle = bsSingle
         ItemHeight = 15
         Items.Strings = (
           '1 - Por Código'
           '2 - Por Nome'
           '3 - Por Contato'
         )
-        TabOrder = 3
+        Style = csDropDownList
+        TabOrder = 0
       end
     end
     object pgLancadados: TTabSheet
       Caption = 'Lançar dados'
       ClientHeight = 250
-      ClientWidth = 426
+      ClientWidth = 448
       TabVisible = False
       object Label3: TLabel
         Left = 4

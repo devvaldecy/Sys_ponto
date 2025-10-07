@@ -36,6 +36,8 @@ type
     procedure BitPesquisarClick(Sender: TObject);
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
+    procedure BtnSalvarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure Habilitar;
     procedure Limpar;
@@ -99,6 +101,16 @@ end;
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
 begin
   PageControl1.ActivePage := pgPesquisar;
+end;
+
+procedure TFrmCadSetor.BtnSalvarClick(Sender: TObject);
+begin
+
+end;
+
+procedure TFrmCadSetor.FormCreate(Sender: TObject);
+begin
+    //cbescolha.SetFocus;
 end;
 
 procedure TFrmCadSetor.Habilitar;

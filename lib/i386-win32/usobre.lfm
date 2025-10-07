@@ -21,12 +21,12 @@ object FrmSobre: TFrmSobre
     TabOrder = 0
     object pnlTop: TPanel
       Left = 2
-      Height = 23
+      Height = 17
       Top = 2
       Width = 614
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 23
+      ClientHeight = 17
       ClientWidth = 614
       Color = 13477943
       Font.CharSet = ANSI_CHARSET
@@ -40,7 +40,7 @@ object FrmSobre: TFrmSobre
       TabOrder = 0
       object BtnFechar: TSpeedButton
         Left = 593
-        Height = 23
+        Height = 17
         Top = 0
         Width = 21
         Align = alRight
@@ -260,12 +260,12 @@ object FrmSobre: TFrmSobre
     end
     object pnlLeste: TPanel
       Left = 2
-      Height = 242
-      Top = 25
+      Height = 248
+      Top = 19
       Width = 302
       Align = alLeft
       BevelOuter = bvNone
-      ClientHeight = 242
+      ClientHeight = 248
       ClientWidth = 302
       TabOrder = 1
       object Image1: TImage

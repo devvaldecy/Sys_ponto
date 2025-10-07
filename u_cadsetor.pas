@@ -37,6 +37,7 @@ type
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     procedure Habilitar;
     procedure Limpar;
@@ -105,6 +106,11 @@ end;
 procedure TFrmCadSetor.BtnSalvarClick(Sender: TObject);
 begin
 
+end;
+
+procedure TFrmCadSetor.FormCreate(Sender: TObject);
+begin
+    //cbescolha.SetFocus;
 end;
 
 procedure TFrmCadSetor.Habilitar;

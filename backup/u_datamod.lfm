@@ -9,18 +9,18 @@ object FrmDM: TFrmDM
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
-    Connected = True
     AfterConnect = zConecteAfterConnect
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 0
-    Database = 'C:\Users\admin\Documents\Projetos\Proj_Sysponto\Sys_ponto\Banco\db_teste'
+    Database = 'C:\Users\admin\Documents\Projetos\proj_ponto\Sys_ponto\Banco\db_teste'
     Protocol = 'sqlite'
-    LibraryLocation = 'C:\Users\admin\Documents\Projetos\Proj_Sysponto\Sys_ponto\Dll\sqlite3.dll'
+    LibraryLocation = 'C:\Users\admin\Documents\Projetos\proj_ponto\Sys_ponto\Dll\sqlite3.dll'
     Left = 24
     Top = 16
   end
   object zTransacoes: TZTransaction
+    Connection = zConecte
     AutoCommit = True
     Left = 96
     Top = 16
