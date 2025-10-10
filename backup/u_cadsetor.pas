@@ -37,6 +37,7 @@ type
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
     procedure Habilitar;
@@ -129,6 +130,19 @@ begin
       Limpar;
    end;
 end;
+end;
+
+procedure TFrmCadSetor.DBGrid1DblClick(Sender: TObject);
+begin
+     // Colocar dados nos edtis
+     if PageControl1.ActivePage =  pgPesquisar then
+        begin
+        PageControl1.ActivePage := pgLancadados
+        end;
+     edtCodigo.Text   := IntToStr(DBGrid1.Columns[0].Field.Value);
+     EdtNome.Text     := DBGrid1.Columns[1].Field.Value;
+     EdtEmail.Text    := DBGrid1.Columns[2].Field.Value;
+     EdtContato.Text  := DBGrid1.Columns[3].Field.Value;
 end;
 
 procedure TFrmCadSetor.FormCreate(Sender: TObject);

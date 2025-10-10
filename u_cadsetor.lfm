@@ -196,6 +196,7 @@ inherited FrmCadSetor: TFrmCadSetor
         FixedColor = clActiveBorder
         Options = [dgTitles, dgIndicator, dgColumnMove, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgMultiselect, dgDisplayMemoText]
         TabOrder = 2
+        OnDblClick = DBGrid1DblClick
       end
       object BitPesquisar: TBitBtn
         Left = 318
