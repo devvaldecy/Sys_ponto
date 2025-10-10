@@ -1,14 +1,15 @@
 object FrmDM: TFrmDM
   OldCreateOrder = False
   Height = 290
-  HorizontalOffset = 422
-  VerticalOffset = 195
+  HorizontalOffset = 415
+  VerticalOffset = 191
   Width = 362
   object zConecte: TZConnection
     ControlsCodePage = cCP_UTF8
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
+    Connected = True
     AfterConnect = zConecteAfterConnect
     DisableSavepoints = False
     HostName = 'localhost'
@@ -40,7 +41,7 @@ object FrmDM: TFrmDM
       'Select * from setor;'
     )
     Params = <>
-    Left = 240
+    Left = 232
     Top = 16
   end
 end

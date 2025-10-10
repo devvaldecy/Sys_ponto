@@ -49,13 +49,82 @@ inherited FrmCadSetor: TFrmCadSetor
     end
   end
   object PageControl1: TPageControl[2]
-    Left = 122
+    Left = 121
     Height = 278
-    Top = 50
+    Top = 51
     Width = 456
     ActivePage = pgPesquisar
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 2
+    object pgLancadados: TTabSheet
+      Caption = 'Lançar dados'
+      ClientHeight = 250
+      ClientWidth = 448
+      TabVisible = False
+      object Label3: TLabel
+        Left = 4
+        Height = 15
+        Top = 42
+        Width = 54
+        Caption = 'CÓDIGO .:'
+      end
+      object Label4: TLabel
+        Left = 4
+        Height = 15
+        Top = 89
+        Width = 44
+        Caption = 'NOME .:'
+      end
+      object Label5: TLabel
+        Left = 4
+        Height = 15
+        Top = 134
+        Width = 43
+        Caption = 'EMAIL .:'
+      end
+      object Label6: TLabel
+        Left = 4
+        Height = 15
+        Top = 183
+        Width = 63
+        Caption = 'CONTATO .:'
+      end
+      object edtCodigo: TEdit
+        Left = 74
+        Height = 23
+        Top = 37
+        Width = 80
+        Color = clActiveBorder
+        MaxLength = 6
+        NumbersOnly = True
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object EdtNome: TEdit
+        Left = 74
+        Height = 23
+        Top = 82
+        Width = 340
+        Color = clActiveBorder
+        TabOrder = 1
+      end
+      object EdtEmail: TEdit
+        Left = 74
+        Height = 23
+        Top = 130
+        Width = 340
+        Color = clActiveBorder
+        TabOrder = 2
+      end
+      object EdtContato: TEdit
+        Left = 74
+        Height = 23
+        Top = 179
+        Width = 112
+        Color = clActiveBorder
+        TabOrder = 3
+      end
+    end
     object pgPesquisar: TTabSheet
       Caption = 'Consultar'
       ClientHeight = 250
@@ -115,7 +184,6 @@ inherited FrmCadSetor: TFrmCadSetor
             FieldName = 'email'
           end        
           item
-            Title.Color = clBtnFace
             Title.Font.CharSet = ANSI_CHARSET
             Title.Font.Pitch = fpVariable
             Title.Font.Quality = fqDraft
@@ -126,7 +194,7 @@ inherited FrmCadSetor: TFrmCadSetor
           end>
         DataSource = DSConsultar
         FixedColor = clActiveBorder
-        Options = [dgTitles, dgIndicator, dgColumnMove, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgMultiselect]
+        Options = [dgTitles, dgIndicator, dgColumnMove, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgMultiselect, dgDisplayMemoText]
         TabOrder = 2
       end
       object BitPesquisar: TBitBtn
@@ -317,85 +385,16 @@ inherited FrmCadSetor: TFrmCadSetor
         Items.Strings = (
           '1 - Por Código'
           '2 - Por Nome'
-          '3 - Por Contato'
+          '3 - Todos Registros'
         )
         Style = csDropDownList
         TabOrder = 0
       end
     end
-    object pgLancadados: TTabSheet
-      Caption = 'Lançar dados'
-      ClientHeight = 250
-      ClientWidth = 448
-      TabVisible = False
-      object Label3: TLabel
-        Left = 4
-        Height = 15
-        Top = 42
-        Width = 54
-        Caption = 'CÓDIGO .:'
-      end
-      object Label4: TLabel
-        Left = 4
-        Height = 15
-        Top = 89
-        Width = 44
-        Caption = 'NOME .:'
-      end
-      object Label5: TLabel
-        Left = 4
-        Height = 15
-        Top = 134
-        Width = 43
-        Caption = 'EMAIL .:'
-      end
-      object Label6: TLabel
-        Left = 4
-        Height = 15
-        Top = 183
-        Width = 63
-        Caption = 'CONTATO .:'
-      end
-      object edtCodigo: TEdit
-        Left = 74
-        Height = 23
-        Top = 37
-        Width = 80
-        Color = clActiveBorder
-        MaxLength = 6
-        NumbersOnly = True
-        ReadOnly = True
-        TabOrder = 0
-      end
-      object EdtNome: TEdit
-        Left = 74
-        Height = 23
-        Top = 82
-        Width = 340
-        Color = clActiveBorder
-        TabOrder = 1
-      end
-      object EdtEmail: TEdit
-        Left = 74
-        Height = 23
-        Top = 130
-        Width = 340
-        Color = clActiveBorder
-        TabOrder = 2
-      end
-      object EdtContato: TEdit
-        Left = 74
-        Height = 23
-        Top = 179
-        Width = 112
-        Color = clActiveBorder
-        TabOrder = 3
-      end
-    end
   end
   object DSConsultar: TDataSource[3]
     DataSet = FrmDM.zQconsultasetor
-    Left = 160
-    Top = 209
+    Left = 456
+    Top = 8
   end
 end

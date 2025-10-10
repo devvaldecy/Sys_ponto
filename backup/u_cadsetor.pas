@@ -58,12 +58,13 @@ procedure TFrmCadSetor.BtnNovoClick(Sender: TObject);
 begin
   inherited;
   PageControl1.ActivePage := pgLancadados;
+  pgLancadados.Caption    := 'Inserir novo registro';
   EdtNome.SetFocus;
 end;
 
 procedure TFrmCadSetor.BitPesquisarClick(Sender: TObject);
 begin
-    if edtPesquisar.Text = '' then
+ if edtPesquisar.Text = '' then
   begin
   ShowMessage('Campos não podem ser vazio...');
   edtPesquisar.SetFocus;
@@ -74,7 +75,7 @@ begin
   begin
   Close;
   SQL.Clear;
-  case CbEscolha.ItemIndex of
+   case CbEscolha.ItemIndex of
   0: Begin
   SQL.Add('Select * from setor where id = ' + edtPesquisar.Text);
   edtPesquisar.SetFocus;
@@ -101,11 +102,33 @@ end;
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
 begin
   PageControl1.ActivePage := pgPesquisar;
+  pgLancadados.Caption    := 'Pesquisando...';
 end;
 
 procedure TFrmCadSetor.BtnSalvarClick(Sender: TObject);
 begin
-
+ if EdtNome.Text = '' then
+    begin
+    ShowMessage('Campo vazio preenchar pra continuar');
+    EdtNome.SetFocus;
+    end
+      Else
+    Begin
+    with FrmDM.zCadset do
+    begin
+      Close;
+      Sql.Clear;
+      SQL.Add('INSERT INTO setor');
+      SQL.Add('(nome, email, telefone)');
+      SQL.Add('values (:pnome, :pemail, :ptelefone)');
+      ParamByName('pnome').AsString    := EdtNome.Text;
+      ParamByName('pemail').AsString   := EdtEmail.Text;
+      ParamByName('ptelefone').AsString := EdtContato.Text;
+      ExecSQL;
+      ShowMessage('Registro inserido com sucesso....');
+      Limpar;
+   end;
+end;
 end;
 
 procedure TFrmCadSetor.FormCreate(Sender: TObject);
