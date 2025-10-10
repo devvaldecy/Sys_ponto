@@ -44,6 +44,9 @@ inherited FrmCadSetor: TFrmCadSetor
     inherited BtnSalvar: TBitBtn
       OnClick = BtnSalvarClick
     end
+    inherited BtnAlterar: TBitBtn
+      OnClick = BtnAlterarClick
+    end
     inherited BtnPesquisar: TBitBtn
       OnClick = BtnPesquisarClick
     end
@@ -53,8 +56,8 @@ inherited FrmCadSetor: TFrmCadSetor
     Height = 278
     Top = 51
     Width = 456
-    ActivePage = pgPesquisar
-    TabIndex = 1
+    ActivePage = pgLancadados
+    TabIndex = 0
     TabOrder = 2
     object pgLancadados: TTabSheet
       Caption = 'Lançar dados'

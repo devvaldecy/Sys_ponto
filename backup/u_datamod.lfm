@@ -34,6 +34,46 @@ object FrmDM: TFrmDM
     Params = <>
     Left = 161
     Top = 16
+    object zCadsetid: TZInt64Field
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object zCadsetnome: TZRawCLobField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object zCadsetemail: TZRawCLobField
+      FieldKind = fkData
+      FieldName = 'email'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object zCadsettelefone: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'telefone'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
   end
   object zQconsultasetor: TZQuery
     Connection = zConecte

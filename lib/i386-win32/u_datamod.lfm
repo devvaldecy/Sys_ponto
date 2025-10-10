@@ -81,7 +81,7 @@ object FrmDM: TFrmDM
       'Select * from setor;'
     )
     Params = <>
-    Left = 232
+    Left = 240
     Top = 16
   end
 end

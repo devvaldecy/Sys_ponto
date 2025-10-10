@@ -44,6 +44,9 @@ inherited FrmCadSetor: TFrmCadSetor
     inherited BtnSalvar: TBitBtn
       OnClick = BtnSalvarClick
     end
+    inherited BtnAlterar: TBitBtn
+      OnClick = BtnAlterarClick
+    end
     inherited BtnPesquisar: TBitBtn
       OnClick = BtnPesquisarClick
     end

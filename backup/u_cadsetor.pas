@@ -34,6 +34,7 @@ type
     pgLancadados: TTabSheet;
     pgPesquisar: TTabSheet;
     procedure BitPesquisarClick(Sender: TObject);
+    procedure BtnAlterarClick(Sender: TObject);
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
@@ -100,6 +101,24 @@ begin
   end;
 end;
 
+procedure TFrmCadSetor.BtnAlterarClick(Sender: TObject);
+begin
+  with FrmDM.zCadset do
+    begin
+      Close;
+      Sql.Clear;
+      sql.add ('update setor set id =:pid where nome =:pnome email =:pemail telefone =:ptelefone');
+      ParamByName('pid').AsString       := EdtCodigo.text;
+      ParamByName('pnome').AsString     := EdtNome.Text;
+      ParamByName('pemail').AsString    := EdtEmail.Text;
+      ParamByName('ptelefone').AsString := EdtContato.Text;
+      ExecSQL;
+      ShowMessage('Registro Alterado com sucesso....');
+      limpar;
+      EdtNome.SetFocus;
+   end;
+end;
+
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
 begin
   PageControl1.ActivePage := pgPesquisar;
@@ -143,6 +162,7 @@ begin
      EdtNome.Text     := DBGrid1.Columns[1].Field.Value;
      EdtEmail.Text    := DBGrid1.Columns[2].Field.Value;
      EdtContato.Text  := DBGrid1.Columns[3].Field.Value;
+     EdtNome.SetFocus;
 end;
 
 procedure TFrmCadSetor.FormCreate(Sender: TObject);

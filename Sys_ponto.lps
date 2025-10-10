@@ -30,7 +30,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="2"/>
         <TopLine Value="7"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="135"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -43,7 +43,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="34"/>
         <CursorPos X="30" Y="60"/>
-        <UsageCount Value="120"/>
+        <UsageCount Value="122"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -55,8 +55,9 @@
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="1"/>
         <CursorPos X="3" Y="41"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="u_cadsetor.pas"/>
@@ -66,14 +67,14 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="128"/>
-        <CursorPos X="22" Y="145"/>
-        <UsageCount Value="32"/>
+        <TopLine Value="104"/>
+        <CursorPos X="3" Y="106"/>
+        <UsageCount Value="34"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="4">
+    <JumpHistory HistoryIndex="6">
       <Position>
         <Filename Value="u_datamod.pas"/>
         <Caret Line="36" Column="3" TopLine="9"/>
@@ -93,6 +94,14 @@
       <Position>
         <Filename Value="u_cadsetor.pas"/>
         <Caret Line="142" Column="65" TopLine="135"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadsetor.pas"/>
+        <Caret Line="151" Column="22" TopLine="134"/>
+      </Position>
+      <Position>
+        <Filename Value="u_cadsetor.pas"/>
+        <Caret Line="111" Column="53" TopLine="104"/>
       </Position>
     </JumpHistory>
     <RunParams>

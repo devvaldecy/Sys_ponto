@@ -5,13 +5,17 @@ unit u_datamod;
 interface
 
 uses
-  Classes, SysUtils, ZConnection, ZDataset;
+  Classes, SysUtils, ZConnection, ZDataset, ZAbstractRODataset;
 
 type
 
   { TFrmDM }
 
   TFrmDM = class(TDataModule)
+    zCadsetemail: TZRawCLobField;
+    zCadsetid: TZInt64Field;
+    zCadsetnome: TZRawCLobField;
+    zCadsettelefone: TZRawStringField;
     zConecte: TZConnection;
     zCadset: TZQuery;
     zQconsultasetor: TZQuery;
