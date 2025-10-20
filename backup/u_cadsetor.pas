@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
-  DBGrids, Buttons, u_datamod, u_cadpadrao;
+  DBGrids, Buttons, MaskEdit, u_datamod, u_cadpadrao;
 
 type
 
@@ -20,7 +20,6 @@ type
     edtCodigo: TEdit;
     EdtNome: TEdit;
     EdtEmail: TEdit;
-    EdtTelefone: TEdit;
     edtPesquisar: TEdit;
     LblRegistros: TLabel;
     Label2: TLabel;
@@ -30,15 +29,18 @@ type
     Label6: TLabel;
     Label7: TLabel;
     LblRegistros1: TLabel;
+    EdtTelefone: TMaskEdit;
     PageControl1: TPageControl;
     pgLancadados: TTabSheet;
     pgPesquisar: TTabSheet;
     procedure BitPesquisarClick(Sender: TObject);
     procedure BtnAlterarClick(Sender: TObject);
+    procedure BtnDeletarClick(Sender: TObject);
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
     procedure BtnSalvarClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
     procedure Habilitar;
@@ -113,7 +115,13 @@ begin
        ParamByName('ptelefone').AsString := EdtTelefone.Text;
        ParamByName('pid').AsInteger      := StrToInt(edtCodigo.Text);
        ExecSQL;
+       Limpar;
   end;
+end;
+
+procedure TFrmCadSetor.BtnDeletarClick(Sender: TObject);
+begin
+
 end;
 
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
@@ -144,6 +152,7 @@ begin
       ExecSQL;
       ShowMessage('Registro inserido com sucesso....');
       Limpar;
+      EdtNome.SetFocus;
    end;
 end;
 end;
@@ -158,8 +167,20 @@ begin
      edtCodigo.Text   := IntToStr(DBGrid1.Columns[0].Field.Value);
      EdtNome.Text     := DBGrid1.Columns[1].Field.Value;
      EdtEmail.Text    := DBGrid1.Columns[2].Field.Value;
-     EdtTelefone.Text  := DBGrid1.Columns[3].Field.Value;
+     //EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
+     EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
      EdtNome.SetFocus;
+end;
+
+procedure TFrmCadSetor.FormClose(Sender: TObject; var CloseAction: TCloseAction
+  );
+begin
+ with FrmDM.zCadset do
+   begin
+   Active:=false;
+   Close;
+   sql.Clear;
+   end;
 end;
 
 procedure TFrmCadSetor.FormCreate(Sender: TObject);

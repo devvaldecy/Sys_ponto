@@ -1,8 +1,8 @@
 object FrmDM: TFrmDM
   OldCreateOrder = False
   Height = 290
-  HorizontalOffset = 415
-  VerticalOffset = 191
+  HorizontalOffset = 487
+  VerticalOffset = 224
   Width = 362
   object zConecte: TZConnection
     ControlsCodePage = cCP_UTF8

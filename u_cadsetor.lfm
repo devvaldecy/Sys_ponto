@@ -4,6 +4,7 @@ inherited FrmCadSetor: TFrmCadSetor
   BorderStyle = bsSingle
   Caption = 'Cadastro de Setores'
   ClientWidth = 577
+  OnClose = FormClose
   OnCreate = FormCreate
   inherited PnlTop: TPanel
     Width = 577
@@ -47,6 +48,9 @@ inherited FrmCadSetor: TFrmCadSetor
     inherited BtnAlterar: TBitBtn
       OnClick = BtnAlterarClick
     end
+    inherited BtnDeletar: TBitBtn
+      OnClick = BtnDeletarClick
+    end
     inherited BtnPesquisar: TBitBtn
       OnClick = BtnPesquisarClick
     end
@@ -56,8 +60,8 @@ inherited FrmCadSetor: TFrmCadSetor
     Height = 278
     Top = 51
     Width = 456
-    ActivePage = pgLancadados
-    TabIndex = 0
+    ActivePage = pgPesquisar
+    TabIndex = 1
     TabOrder = 2
     object pgLancadados: TTabSheet
       Caption = 'Lançar dados'
@@ -119,13 +123,18 @@ inherited FrmCadSetor: TFrmCadSetor
         Color = clActiveBorder
         TabOrder = 2
       end
-      object EdtTelefone: TEdit
+      object EdtTelefone: TMaskEdit
         Left = 74
         Height = 23
-        Top = 179
-        Width = 112
+        Top = 180
+        Width = 104
         Color = clActiveBorder
+        EnableSets = False
+        MaxLength = 13
         TabOrder = 3
+        EditMask = '(00)0000-0000;1;_'
+        Text = '(  )    -    '
+        SpaceChar = '_'
       end
     end
     object pgPesquisar: TTabSheet
