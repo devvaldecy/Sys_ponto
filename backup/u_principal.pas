@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls, Buttons, u_cadpadrao, usobre;
+  StdCtrls, Buttons, u_cadpadrao, u_cadsetor, usobre;
 
 type
 

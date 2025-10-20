@@ -20,7 +20,7 @@ type
     edtCodigo: TEdit;
     EdtNome: TEdit;
     EdtEmail: TEdit;
-    EdtContato: TEdit;
+    EdtTelefone: TEdit;
     edtPesquisar: TEdit;
     LblRegistros: TLabel;
     Label2: TLabel;
@@ -104,19 +104,16 @@ end;
 procedure TFrmCadSetor.BtnAlterarClick(Sender: TObject);
 begin
   with FrmDM.zCadset do
-    begin
-      Close;
-      Sql.Clear;
-      sql.add ('update setor set id =:pid where nome =:pnome email =:pemail telefone =:ptelefone');
-      ParamByName('pid').AsString       := EdtCodigo.text;
-      ParamByName('pnome').AsString     := EdtNome.Text;
-      ParamByName('pemail').AsString    := EdtEmail.Text;
-      ParamByName('ptelefone').AsString := EdtContato.Text;
-      ExecSQL;
-      ShowMessage('Registro Alterado com sucesso....');
-      limpar;
-      EdtNome.SetFocus;
-   end;
+  Begin
+       Close;
+       SQL.Clear;
+       SQL.Add('update setor set nome = :pnome, email = :pemail, telefone = :ptelefone where id =:pid');
+       ParamByName('pnome').AsString     := EdtNome.Text;
+       ParamByName('pemail').AsString    := EdtEmail.Text;
+       ParamByName('ptelefone').AsString := EdtTelefone.Text;
+       ParamByName('pid').AsInteger      := StrToInt(edtCodigo.Text);
+       ExecSQL;
+  end;
 end;
 
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
@@ -143,7 +140,7 @@ begin
       SQL.Add('values (:pnome, :pemail, :ptelefone)');
       ParamByName('pnome').AsString    := EdtNome.Text;
       ParamByName('pemail').AsString   := EdtEmail.Text;
-      ParamByName('ptelefone').AsString := EdtContato.Text;
+      ParamByName('ptelefone').AsString := EdtTelefone.Text;
       ExecSQL;
       ShowMessage('Registro inserido com sucesso....');
       Limpar;
@@ -161,7 +158,7 @@ begin
      edtCodigo.Text   := IntToStr(DBGrid1.Columns[0].Field.Value);
      EdtNome.Text     := DBGrid1.Columns[1].Field.Value;
      EdtEmail.Text    := DBGrid1.Columns[2].Field.Value;
-     EdtContato.Text  := DBGrid1.Columns[3].Field.Value;
+     EdtTelefone.Text  := DBGrid1.Columns[3].Field.Value;
      EdtNome.SetFocus;
 end;
 
@@ -186,7 +183,7 @@ begin
     edtCodigo.Clear;
     EdtNome.Clear;
     EdtEmail.Clear;
-    EdtContato.Clear;
+    EdtTelefone.Clear;
 end;
 
 end.

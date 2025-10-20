@@ -119,7 +119,7 @@ inherited FrmCadSetor: TFrmCadSetor
         Color = clActiveBorder
         TabOrder = 2
       end
-      object EdtContato: TEdit
+      object EdtTelefone: TEdit
         Left = 74
         Height = 23
         Top = 179
