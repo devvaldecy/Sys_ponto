@@ -123,7 +123,7 @@ begin
                  ShowMessage('Atualizado com sucesso');
               except on E:Exception do
                 ShowMessage('Erro ao atualizar o registro');
-        end;
+                end;
    end;
 end;
 
