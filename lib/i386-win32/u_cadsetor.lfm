@@ -60,46 +60,45 @@ inherited FrmCadSetor: TFrmCadSetor
     Height = 278
     Top = 51
     Width = 456
-    ActivePage = pgPesquisar
-    TabIndex = 1
+    ActivePage = pgLancadados
+    TabIndex = 0
     TabOrder = 2
     object pgLancadados: TTabSheet
       Caption = 'Lançar dados'
       ClientHeight = 250
       ClientWidth = 448
-      TabVisible = False
       object Label3: TLabel
-        Left = 4
+        Left = 23
         Height = 15
-        Top = 42
+        Top = 44
         Width = 54
         Caption = 'CÓDIGO .:'
       end
       object Label4: TLabel
-        Left = 4
+        Left = 23
         Height = 15
-        Top = 89
+        Top = 91
         Width = 44
         Caption = 'NOME .:'
       end
       object Label5: TLabel
-        Left = 4
+        Left = 23
         Height = 15
-        Top = 134
+        Top = 136
         Width = 43
         Caption = 'EMAIL .:'
       end
       object Label6: TLabel
-        Left = 4
+        Left = 23
         Height = 15
-        Top = 183
+        Top = 185
         Width = 63
         Caption = 'CONTATO .:'
       end
       object edtCodigo: TEdit
-        Left = 74
+        Left = 93
         Height = 23
-        Top = 37
+        Top = 39
         Width = 80
         Color = clActiveBorder
         MaxLength = 6
@@ -108,32 +107,32 @@ inherited FrmCadSetor: TFrmCadSetor
         TabOrder = 0
       end
       object EdtNome: TEdit
-        Left = 74
+        Left = 93
         Height = 23
-        Top = 82
+        Top = 84
         Width = 340
         Color = clActiveBorder
         TabOrder = 1
       end
       object EdtEmail: TEdit
-        Left = 74
+        Left = 93
         Height = 23
-        Top = 130
+        Top = 132
         Width = 340
         Color = clActiveBorder
         TabOrder = 2
       end
       object EdtTelefone: TMaskEdit
-        Left = 74
+        Left = 93
         Height = 23
-        Top = 180
+        Top = 182
         Width = 104
         Color = clActiveBorder
         EnableSets = False
-        MaxLength = 13
+        MaxLength = 14
         TabOrder = 3
-        EditMask = '(00)0000-0000;1;_'
-        Text = '(  )    -    '
+        EditMask = '(000)0000-0000;1;_'
+        Text = '(   )    -    '
         SpaceChar = '_'
       end
     end

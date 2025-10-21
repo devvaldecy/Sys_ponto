@@ -107,16 +107,24 @@ procedure TFrmCadSetor.BtnAlterarClick(Sender: TObject);
 begin
   with FrmDM.zCadset do
   Begin
-       Close;
-       SQL.Clear;
-       SQL.Add('update setor set nome = :pnome, email = :pemail, telefone = :ptelefone where id =:pid');
-       ParamByName('pnome').AsString     := EdtNome.Text;
-       ParamByName('pemail').AsString    := EdtEmail.Text;
-       ParamByName('ptelefone').AsString := EdtTelefone.Text;
-       ParamByName('pid').AsInteger      := StrToInt(edtCodigo.Text);
-       ExecSQL;
-       Limpar;
-  end;
+       if QuestionDlg('Confirmação','Excluir o Registro',mtConfirmation,
+         [mrYes,'Sim', mrNo, 'Não'],0) = mrYes then
+         Close;
+         SQL.Clear;
+         SQL.Add('update setor set nome = :pnome, email = :pemail, telefone = :ptelefone where id =:pid');
+         ParamByName('pnome').AsString     := EdtNome.Text;
+         ParamByName('pemail').AsString    := EdtEmail.Text;
+         ParamByName('ptelefone').AsString := EdtTelefone.Text;
+         ParamByName('pid').AsInteger      := StrToInt(edtCodigo.Text);
+         ExecSQL;
+         Limpar;
+             try
+                ExecSQL;
+                 ShowMessage('Atualizado com sucesso');
+              except on E:Exception do
+                ShowMessage('Erro ao atualizar o registro');
+                end;
+   end;
 end;
 
 procedure TFrmCadSetor.BtnDeletarClick(Sender: TObject);
@@ -128,7 +136,14 @@ begin
    sql.Clear;
    sql.Add('Delete from setor where id = :pid');
    ParamByName('pid').AsInteger := StrToInt(edtCodigo.Text);
-   ExecSQL;
+  if QuestionDlg('Confirmação','Excluir o Registro',mtConfirmation,
+       [mrYes,'Sim', mrNo, 'Não'],0) = mrYes then
+      try
+        ExecSQL;
+         ShowMessage('Excluido com seucesso');
+      except on E:Exception do
+        ShowMessage('Erro ao Excluir o registro');
+      end;
  end;
 end;
 
