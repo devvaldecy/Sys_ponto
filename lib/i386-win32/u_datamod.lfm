@@ -13,9 +13,9 @@ object FrmDM: TFrmDM
     DisableSavepoints = False
     HostName = 'localhost'
     Port = 0
-    Database = 'C:\Users\Familia\Documents\Projeto_laz\Sys_ponto\Banco\db_teste'
+    Database = 'C:\Users\Admin\Documents\Projeto_laz\Sys_ponto\Banco\db_teste'
     Protocol = 'sqlite'
-    LibraryLocation = 'C:\Users\Familia\Documents\Projeto_laz\Sys_ponto\Dll\sqlite3.dll'
+    LibraryLocation = 'C:\Users\Admin\Documents\Projeto_laz\Sys_ponto\Dll\sqlite3.dll'
     Left = 24
     Top = 16
   end

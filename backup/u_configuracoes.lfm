@@ -1,0 +1,150 @@
+inherited FrmConfiguracoes: TFrmConfiguracoes
+  Height = 241
+  Width = 486
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Configurações do Sistema'
+  ClientHeight = 241
+  ClientWidth = 486
+  inherited PnlTop: TPanel
+    Height = 24
+    Width = 486
+    Color = clDefault
+    Visible = False
+  end
+  inherited PnlLest: TPanel
+    Left = 2
+    Height = 239
+    Top = 0
+    Align = alNone
+    BevelInner = bvLowered
+    BorderStyle = bsSingle
+    ClientHeight = 235
+    ClientWidth = 118
+    inherited BtnNovo: TBitBtn
+      Left = 1
+      Top = 1
+      Width = 116
+      Visible = False
+    end
+    inherited BtnSalvar: TBitBtn
+      Left = 1
+      Top = 41
+      Width = 116
+      Enabled = True
+    end
+    inherited BtnAlterar: TBitBtn
+      Left = 1
+      Top = 121
+      Width = 116
+      Enabled = True
+    end
+    inherited BtnDeletar: TBitBtn
+      Left = 1
+      Top = 201
+      Width = 116
+      Visible = False
+    end
+    inherited BtnCancelar: TBitBtn
+      Left = 1
+      Top = 81
+      Width = 116
+      Align = alTop
+      Enabled = True
+    end
+    inherited BitBtn6: TBitBtn
+      Left = 1
+      Top = 161
+      Width = 116
+      Align = alTop
+    end
+    inherited BtnPesquisar: TBitBtn
+      Enabled = True
+      Visible = False
+      OnClick = BtnPesquisarClick
+    end
+  end
+  object Panel1: TPanel[2]
+    Left = 123
+    Height = 239
+    Top = 0
+    Width = 361
+    BevelInner = bvLowered
+    ClientHeight = 239
+    ClientWidth = 361
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 51
+      Height = 17
+      Top = 26
+      Width = 255
+      Caption = 'Está tela é para configurações do sistema'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 51
+      Height = 17
+      Top = 63
+      Width = 175
+      Caption = 'Caminha do banco de dados'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 51
+      Height = 25
+      Top = 95
+      Width = 212
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      Text = 'C:\Sys_ponto\Banco'
+    end
+    object Label3: TLabel
+      Left = 51
+      Height = 17
+      Top = 143
+      Width = 148
+      Caption = 'Caminho Dll do sistema'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Edit2: TEdit
+      Left = 51
+      Height = 25
+      Top = 175
+      Width = 212
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -13
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      Text = 'C:\Sys_ponto\Dll'
+    end
+  end
+end

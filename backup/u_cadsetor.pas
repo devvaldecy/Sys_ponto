@@ -62,106 +62,110 @@ procedure TFrmCadSetor.BtnNovoClick(Sender: TObject);
 begin
   inherited;
   PageControl1.ActivePage := pgLancadados;
-  pgLancadados.Caption    := 'Inserir novo registro';
+  pgLancadados.Caption := 'Inserir novo registro';
   EdtNome.SetFocus;
 end;
 
 procedure TFrmCadSetor.BitPesquisarClick(Sender: TObject);
 begin
- if edtPesquisar.Text = '' then
+  if edtPesquisar.Text = '' then
   begin
-  ShowMessage('Campos não podem ser vazio...');
-  edtPesquisar.SetFocus;
+    ShowMessage('Campos não podem ser vazio...');
+    edtPesquisar.SetFocus;
   end
-  Else
-  Begin
-  with FrmDM.zQconsultasetor do
+  else
   begin
-  Close;
-  SQL.Clear;
-   case CbEscolha.ItemIndex of
-  0: Begin
-  SQL.Add('Select * from setor where id = ' + edtPesquisar.Text);
-  edtPesquisar.SetFocus;
-  end;
-  2: begin
-  SQL.Add('Select * from setor where nome LIKE ' + QuotedStr( '%' + edtPesquisar.Text + '%' ));
-  edtPesquisar.SetFocus;
-  end;
+    with FrmDM.zQconsultasetor do
+    begin
+      Close;
+      SQL.Clear;
+      case CbEscolha.ItemIndex of
+        0: begin
+          SQL.Add('Select * from setor where id = ' + edtPesquisar.Text);
+          edtPesquisar.SetFocus;
+        end;
+        2: begin
+          SQL.Add('Select * from setor where nome LIKE ' + QuotedStr(
+            '%' + edtPesquisar.Text + '%'));
+          edtPesquisar.SetFocus;
+        end;
 
-  3: begin
-  SQL.Add('Select * from setor order by id');
-  edtPesquisar.SetFocus;
-  end;
-  end;
-  Open;
-  LblRegistros.Caption := IntToStr(RecordCount);
-  if RecordCount = 0 then
-  ShowMessage('Registro não encontrado .... ');
-  Habilitar;
-  end;
+        3: begin
+          SQL.Add('Select * from setor order by id');
+          edtPesquisar.SetFocus;
+        end;
+      end;
+      Open;
+      LblRegistros.Caption := IntToStr(RecordCount);
+      if RecordCount = 0 then
+        ShowMessage('Registro não encontrado .... ');
+      Habilitar;
+    end;
   end;
 end;
 
 procedure TFrmCadSetor.BtnAlterarClick(Sender: TObject);
 begin
   with FrmDM.zCadset do
-  Begin
-       if QuestionDlg('Confirmação','Excluir o Registro',mtConfirmation,
-         [mrYes,'Sim', mrNo, 'Não'],0) = mrYes then
-         Close;
-         SQL.Clear;
-         SQL.Add('update setor set nome = :pnome, email = :pemail, telefone = :ptelefone where id =:pid');
-         ParamByName('pnome').AsString     := EdtNome.Text;
-         ParamByName('pemail').AsString    := EdtEmail.Text;
-         ParamByName('ptelefone').AsString := EdtTelefone.Text;
-         ParamByName('pid').AsInteger      := StrToInt(edtCodigo.Text);
-         ExecSQL;
-         Limpar;
-             try
-                ExecSQL;
-                 ShowMessage('Atualizado com sucesso');
-              except on E:Exception do
-                ShowMessage('Erro ao atualizar o registro');
-                end;
-   end;
+  begin
+    if QuestionDlg('Confirmação', 'Excluir o Registro', mtConfirmation,
+      [mrYes, 'Sim', mrNo, 'Não'], 0) = mrYes then
+      Close;
+    SQL.Clear;
+    SQL.Add(
+      'update setor set nome = :pnome, email = :pemail, telefone = :ptelefone where id =:pid');
+    ParamByName('pnome').AsString := EdtNome.Text;
+    ParamByName('pemail').AsString := EdtEmail.Text;
+    ParamByName('ptelefone').AsString := EdtTelefone.Text;
+    ParamByName('pid').AsInteger := StrToInt(edtCodigo.Text);
+    ExecSQL;
+    Limpar;
+    try
+      ExecSQL;
+      ShowMessage('Atualizado com sucesso');
+    except
+      on E: Exception do
+        ShowMessage('Erro ao atualizar o registro');
+    end;
+  end;
 end;
 
 procedure TFrmCadSetor.BtnDeletarClick(Sender: TObject);
 begin
- with FrmDM.zCadset do
-   begin
-   Active:=false;
-   Close;
-   sql.Clear;
-   sql.Add('Delete from setor where id = :pid');
-   ParamByName('pid').AsInteger := StrToInt(edtCodigo.Text);
-  if QuestionDlg('Confirmação','Excluir o Registro',mtConfirmation,
-       [mrYes,'Sim', mrNo, 'Não'],0) = mrYes then
-      try
-        ExecSQL;
-         ShowMessage('Excluido com seucesso');
-      except on E:Exception do
+  with FrmDM.zCadset do
+  begin
+    Active := False;
+    Close;
+    sql.Clear;
+    sql.Add('Delete from setor where id = :pid');
+    ParamByName('pid').AsInteger := StrToInt(edtCodigo.Text);
+    if QuestionDlg('Confirmação', 'Excluir o Registro', mtConfirmation,
+      [mrYes, 'Sim', mrNo, 'Não'], 0) = mrYes then
+    try
+      ExecSQL;
+      ShowMessage('Excluido com seucesso');
+    except
+      on E: Exception do
         ShowMessage('Erro ao Excluir o registro');
-      end;
- end;
+    end;
+  end;
 end;
 
 procedure TFrmCadSetor.BtnPesquisarClick(Sender: TObject);
 begin
   PageControl1.ActivePage := pgPesquisar;
-  pgLancadados.Caption    := 'Pesquisando...';
+  pgLancadados.Caption := 'Pesquisando...';
 end;
 
 procedure TFrmCadSetor.BtnSalvarClick(Sender: TObject);
 begin
- if EdtNome.Text = '' then
-    begin
+  if EdtNome.Text = '' then
+  begin
     ShowMessage('Campo vazio preenchar pra continuar');
     EdtNome.SetFocus;
-    end
-      Else
-    Begin
+  end
+  else
+  begin
     with FrmDM.zCadset do
     begin
       Close;
@@ -169,66 +173,64 @@ begin
       SQL.Add('INSERT INTO setor');
       SQL.Add('(nome, email, telefone)');
       SQL.Add('values (:pnome, :pemail, :ptelefone)');
-      ParamByName('pnome').AsString    := EdtNome.Text;
-      ParamByName('pemail').AsString   := EdtEmail.Text;
+      ParamByName('pnome').AsString := EdtNome.Text;
+      ParamByName('pemail').AsString := EdtEmail.Text;
       ParamByName('ptelefone').AsString := EdtTelefone.Text;
       ExecSQL;
       ShowMessage('Registro inserido com sucesso....');
       Limpar;
       EdtNome.SetFocus;
-   end;
-end;
+    end;
+  end;
 end;
 
 procedure TFrmCadSetor.DBGrid1DblClick(Sender: TObject);
 begin
-     // Colocar dados nos edtis
-     if PageControl1.ActivePage =  pgPesquisar then
-        begin
-        PageControl1.ActivePage := pgLancadados
-        end;
-     edtCodigo.Text   := IntToStr(DBGrid1.Columns[0].Field.Value);
-     EdtNome.Text     := DBGrid1.Columns[1].Field.Value;
-     EdtEmail.Text    := DBGrid1.Columns[2].Field.Value;
-     //EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
-     EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
-     EdtNome.SetFocus;
+  // Colocar dados nos edtis
+  if PageControl1.ActivePage = pgPesquisar then
+  begin
+    PageControl1.ActivePage := pgLancadados;
+  end;
+  edtCodigo.Text := IntToStr(DBGrid1.Columns[0].Field.Value);
+  EdtNome.Text := DBGrid1.Columns[1].Field.Value;
+  EdtEmail.Text := DBGrid1.Columns[2].Field.Value;
+  //EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
+  EdtTelefone.Text := DBGrid1.Columns[3].Field.Value;
+  EdtNome.SetFocus;
 end;
 
-procedure TFrmCadSetor.FormClose(Sender: TObject; var CloseAction: TCloseAction
-  );
+procedure TFrmCadSetor.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
- with FrmDM.zCadset do
-   begin
-   Active:=false;
-   Close;
-   sql.Clear;
-   end;
+  with FrmDM.zCadset do
+  begin
+    Active := False;
+    Close;
+    sql.Clear;
+  end;
 end;
 
 procedure TFrmCadSetor.FormCreate(Sender: TObject);
 begin
-    //cbescolha.SetFocus;
+  //cbescolha.SetFocus;
 end;
 
 procedure TFrmCadSetor.Habilitar;
 begin
-    // Habilitar Botões
-    BtnAlterar.Enabled   :=True;
-    BtnDeletar.Enabled   :=True;
-    BtnCancelar.Enabled  :=True;
-    BtnPesquisar.Enabled :=True;
-    BtnSalvar.Enabled    :=True;
+  // Habilitar Botões
+  BtnAlterar.Enabled := True;
+  BtnDeletar.Enabled := True;
+  BtnCancelar.Enabled := True;
+  BtnPesquisar.Enabled := True;
+  BtnSalvar.Enabled := True;
 end;
 
 procedure TFrmCadSetor.Limpar;
 begin
-    // Rotina de limpar campos
-    edtCodigo.Clear;
-    EdtNome.Clear;
-    EdtEmail.Clear;
-    EdtTelefone.Clear;
+  // Rotina de limpar campos
+  edtCodigo.Clear;
+  EdtNome.Clear;
+  EdtEmail.Clear;
+  EdtTelefone.Clear;
 end;
 
 end.
-

@@ -10,7 +10,8 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, zcomponent, u_principal, usobre, u_cadpadrao, u_datamod, u_cadsetor
+  Forms, zcomponent, u_principal, usobre, u_cadpadrao, u_datamod, u_cadsetor,
+  u_configuracoes
   { you can add units after this };
 
 {$R *.res}

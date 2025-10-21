@@ -1403,7 +1403,7 @@ object FrmPrincipal: TFrmPrincipal
       Top = 45
       Width = 152
       Align = alTop
-      Caption = 'RE&GISTRO              '
+      Caption = 'RE&GISTROS              '
       Font.CharSet = ANSI_CHARSET
       Font.Height = -13
       Font.Pitch = fpVariable

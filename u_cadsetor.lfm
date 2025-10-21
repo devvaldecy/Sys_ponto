@@ -60,8 +60,8 @@ inherited FrmCadSetor: TFrmCadSetor
     Height = 278
     Top = 51
     Width = 456
-    ActivePage = pgLancadados
-    TabIndex = 0
+    ActivePage = pgPesquisar
+    TabIndex = 1
     TabOrder = 2
     object pgLancadados: TTabSheet
       Caption = 'Lançar dados'

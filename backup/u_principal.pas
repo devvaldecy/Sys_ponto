@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, ExtCtrls,
-  StdCtrls, Buttons, u_cadpadrao, u_cadsetor, usobre;
+  StdCtrls, Buttons, u_cadpadrao, u_cadsetor, u_configuracoes, usobre;
 
 type
 
@@ -92,7 +92,7 @@ begin
   end else
   begin
     BtnFuncionarios.Caption:= 'FUNCIONARIOS';
-    BtnRegistro.Caption    := 'REGISTRAR';
+    BtnRegistro.Caption    := 'REGISTROS';
     BtnRelatorios.Caption  := 'RELATÓRIOS';
     BtnTeste.Caption       := 'SETOR';
     BtnTeste01.Caption     := 'LOJAS';
@@ -142,11 +142,11 @@ end;
 
 procedure TFrmPrincipal.BtnConfigClick(Sender: TObject);
 begin
-  frmcadpadrao := Tfrmcadpadrao.Create(Self);
+  FrmConfiguracoes := TFrmConfiguracoes.Create(Self);
   try
-    frmcadpadrao.ShowModal;
+    FrmConfiguracoes.ShowModal;
   finally
-    FreeAndNil(frmcadpadrao);
+    FreeAndNil(FrmConfiguracoes);
   end;
 end;
 

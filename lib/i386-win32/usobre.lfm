@@ -1,7 +1,7 @@
 object FrmSobre: TFrmSobre
-  Left = 626
+  Left = 436
   Height = 269
-  Top = 261
+  Top = 203
   Width = 618
   BorderStyle = bsNone
   Caption = 'Sobre o Sistema'
